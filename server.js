@@ -9,7 +9,7 @@ app.set('views', __dirname + '/views');
 app.use(stylus.middleware({
   src: __dirname + '/public',
   compile: function(str, path) {
-    return stylus(str).set('filename', path).use(nib);
+    return stylus(str).set('filename', path).use(nib());
   }
 }));
 app.use(express.static(__dirname + "/public"));

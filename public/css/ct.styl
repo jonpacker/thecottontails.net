@@ -1,3 +1,5 @@
+@import 'nib'
+
 body,html
   margin 0px
   padding 0px
@@ -53,21 +55,262 @@ body,html
       line-height 80px
       padding 0px 20px
 
-#about
+#portal
+  background-color #105B63
   width 100%
-  display block
-  color #211f1c
-  background-color #FFFAD5
-  font-family "Playfair Display"
-  font-style italic
-  font-size 32px
-  text-align center
+  padding 80px 20%
+  box-sizing border-box
+  clearfix()
   background-image url(/img/ct_new_subtle.svg)
   background-size 140%
   background-position 50% 50%
   background-repeat no-repeat
 
-  .blurb
-    width 50%
+  padding-bottom 80px + 240px
+
+  .box
+    width 47%
+    height 400px
+    background-color #DB9E36
+    color #FFD34E
+    text-align center
+    font-size 22px
+    font-family "Brandon Grotesque"
+    font-weight normal
+    margin-top 50px
+    clear none
+    position relative
+    background-color #FFFAD5
+    &:hover
+      background-color #FFD34E
+
+    .image
+      width 100%
+      height 100%
+      position absolute
+      left 0px
+      top 0px
+      background-position center
+      background-repeat no-repeat
+      background-size cover
+      opacity 0.5
+
+    .inner-box 
+      color #211f1c
+      width 80%
+      height 40%
+      border 6px solid #211f1c
+      position absolute
+      top 30%
+      left 10%
+      box-sizing border-box
+
+      h1
+        margin 0px
+        height 50px
+        line-height 50px
+        text-align center
+        position absolute
+        top 50%
+        width 100%
+        margin-top -25px
+
+
+    &:nth-child(2n)
+      float right
+    &:nth-child(2n-1)
+      float left
+    &:nth-child(1)
+      margin-top 0px
+    &:nth-child(2)
+      margin-top 150px
+
+    h1
+      margin 0px
+
+#about
+  width 100%
+  display block
+  position relative
+  height 0px
+  overflow visible
+
+  .about-box
+    color #211f1c
+    background-image url(/img/fun.jpg)
+    background-position center
+    background-size cover
+    font-family "Playfair Display"
+    font-style italic
+    font-size 32px
+    text-align center
+    width 80%
+    margin-left -40%
+    box-sizing border-box
+    padding 20px 50px
+    height 400px
+    position absolute
+    left 50%
+    top -200px
+    outline 6px solid #211f1c
+    outline-offset 40px
+
+
+    .blurb
+      width 50%
+      margin 0 auto
+      padding 80px 0px
+
+#feed
+  padding 80px 0px
+  padding-top 240px + 80px
+  width 100%
+  background-color #BD4932
+  clearfix()
+
+  .content + .content
+    margin-top 80px
+  .content
+    width 60%
     margin 0 auto
-    padding 80px 0px
+    color #FFFAD5
+
+    &.wider
+      width 80%
+
+    h1
+      font-family "Playfair Display"
+      font-style italic
+      font-size 54px
+    
+    .stories
+      padding 20px
+      border-left 1px solid #FFD34E
+
+    .news
+      margin-bottom 40px
+      &:last-child
+        margin-bottom 0px
+      .story
+        font-family "Playfair Display"
+        font-size 22px
+        font-style italic
+      .date 
+        font-family "Brandon Grotesque"
+        font-size 16px
+        color #FFD34E
+        position relative
+        padding-left 20px
+        margin-top 8px
+        &:before
+          content ''
+          position absolute
+          width 30px
+          left -21px
+          top 50%
+          height 10px
+          margin-top -10px
+          border-bottom-left-radius 5px
+          border-bottom 1px solid #FFD34E
+          border-left @border-bottom
+
+  .halfbox
+    width 48%
+    margin-right 5px
+    box-sizing border-box
+    border 6px solid #FFD34E
+    padding 40px
+
+    &:nth-of-type(1)
+      float left
+    &:nth-of-type(2)
+      float right
+      margin-top 200px
+
+    h2, h3
+      font-family "Playfair Display"
+      margin-top 0px
+      font-weight 200
+      font-style italic
+    h2
+      font-size 42px
+    h3
+      font-size 26px
+      margin-bottom 6px
+      margin-top 20px
+
+    .map
+      background-image url(/img/location.png)
+      background-size cover
+      background-position center
+      width 100%
+      height 350px
+      opacity 0.5
+      margin-bottom 40px
+
+    .explanation
+      color #FFD34E
+      font-family "Brandon Grotesque"
+
+    .set
+      font-family "Brandon Grotesque"
+      font-size 18px
+
+      .time 
+      .desc
+      .location
+        display inline-block
+        margin-right 5px
+
+      .location:before
+        content '@'
+        font-size 0.6em
+
+      .location
+        font-size 0.8em
+        opacity 0.7
+
+      .time
+      .location
+        color #FFD34E
+
+      .time
+        font-weight bold
+        width 60px
+
+#contact
+  background-color #211f1c
+  color #FFD34E
+  width 100%
+  padding 80px 20%
+  box-sizing border-box
+
+  h1
+    font-family "Playfair Display"
+    font-size 54px
+    font-style italic
+
+  .contact-bits
+    text-align center
+
+  .or
+    font-size 24px
+    font-family "Playfair Display"
+    font-style italic
+    font-weight bold
+    transform skew(12deg, -7deg)
+
+  .email
+  .list
+    color #FFFAD5
+    display inline-block
+    padding 15px 40px
+    border 5px solid #FFD34E
+    text-decoration none
+    font-family "Brandon Grotesque"
+    font-size 32px
+    margin 40px 0px
+
+    &:hover
+      background-color #FFD34E
+      color #211f1c
