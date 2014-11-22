@@ -34,18 +34,12 @@ block content
     .content
       h1 Vår nyhetsstrøm
       .stories
-        .news
-          .story I dag er siste gang for Nivå2 og 3 denne høsten. Bli med :)
-          .date 18. november
-        .news
-          .story Ny klubb kavalér fredag om en uke! Denne gang med storbandet Blæst!
-          .date 14. november
-        .news 
-          .story Husk kurs i autentisk jazz kl 19 i dag :)
-          .date 13. november
-        .news
-          .story Bli med oss til Stavanger neste helg. Lindy on the Edge er en veldig bra workshop med kurs som passer for alle nivå. Vi er en gjeng som skal avgårde og vil gjerne ha med flere
-          .date 29. oktober
+        each story in stories
+          .news
+            a.story(href=story.link) #{story.story} 
+              if story.link
+                .fa.fa-external-link-square
+            .date #{story.date.toString()}
     .content.wider
       .halfbox
         h2 Ukentlig timeplan

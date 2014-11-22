@@ -235,6 +235,17 @@ html {
   font-family: "Playfair Display";
   font-size: 22px;
   font-style: italic;
+  color: inherit;
+  text-decoration: none;
+}
+#feed .content .news .story .fa {
+  display: inline-block;
+  margin-left: 10px;
+  opacity: 0.75;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=75)";
+  filter: alpha(opacity=75);
+  font-size: 0.8em;
+  color: inherit;
 }
 #feed .content .news .date {
   font-family: "Brandon Grotesque";
