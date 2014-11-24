@@ -1,0 +1,17 @@
+extends layout
+block content
+  #events
+    h1 Upcoming events
+    each event in events
+      .event
+        h2= event.name
+        .when
+          .fa.fa-clock-o
+          |  #{event.when}
+        if event.location
+          .location
+            .fa.fa-globe
+            |  #{event.location}
+        a.link(href=event.link, target='blank')
+          .fa.fa-external-link
+          |  Facebook
