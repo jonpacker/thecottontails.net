@@ -30,10 +30,31 @@ request(accessTokenUrl, function(err, res) {
     }).map(function(post) {
       return {
         story: post.message,
-        date: moment(post.created_time).format('D. MMMM'),
+        date: moment(post.created_time).format('Do MMMM'),
         link: post.link
       };
     }).slice(0,5);
+  });
+  request('https://graph.facebook.com/cottontailsdanseklubb/events?' + token, function(err, res) {
+    if (err) return;
+    var body = JSON.parse(res.body);
+    app.locals.events = body.data.map(function(event) {
+      var parsed = {
+        name: event.name,
+        location: event.location,
+      };
+      if (!event.end_time) {
+        parsed.when = moment(event.start_time).format('LT, Do MMMM')
+      } else {
+        var start = moment(event.start_time), end = moment(event.end_time);
+        if (start.dayOfYear() == end.dayOfYear()) {
+          parsed.when = start.format('LT') + '-' + end.format('LT, Do MMMM');
+        } else {
+          parsed.when = start.format('Do MMMM') + '-' + end.format('Do MMMM');
+        }
+      }
+      return parsed;
+    });
   });
 });
 
