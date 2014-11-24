@@ -1,17 +1,15 @@
 extends layout
 block content
   #events
-    h1 Upcoming events
+    h1 Hva skjer?
     each event in events
-      .event
+      a.event(href=event.link, target="blank")
         h2= event.name
-        .when
+        .when.meta
           .fa.fa-clock-o
           |  #{event.when}
         if event.location
-          .location
+          .location.meta
             .fa.fa-globe
             |  #{event.location}
-        a.link(href=event.link, target='blank')
-          .fa.fa-external-link
-          |  Facebook
+        .fa.fa-external-link

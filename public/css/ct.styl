@@ -97,6 +97,16 @@ body,html
     box-sizing border-box
     border 6px solid cs_col1
     padding 50px
+    display block
+    text-decoration none
+    color cs_col6
+    position relative
+
+    &:hover
+      background-color cs_col1
+      color cs_col2
+      .meta
+        color cs_col3
 
     h2
       margin-top 0px
@@ -104,6 +114,27 @@ body,html
       font-weight normal
       font-style italic
       font-size 42px
+
+    .fa-external-link
+      position absolute
+      height 60px
+      line-height 60px
+      margin-top -30px
+      top 50%
+      right 50px
+      color cs_col2
+      font-size 45px
+
+    .meta
+      font-family "Brandon Grotesque"
+      font-size 24px
+      line-height 32px
+      color cs_col5
+      text-decoration none
+
+      .fa
+        width 30px
+        display inline-block
 
 
 #nav

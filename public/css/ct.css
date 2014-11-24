@@ -107,6 +107,17 @@ html {
   box-sizing: border-box;
   border: 6px solid #bd4932;
   padding: 50px;
+  display: block;
+  text-decoration: none;
+  color: #211f1c;
+  position: relative;
+}
+#events .event:hover {
+  background-color: #bd4932;
+  color: #fffad5;
+}
+#events .event:hover .meta {
+  color: #ffd34e;
 }
 #events .event h2 {
   margin-top: 0px;
@@ -114,6 +125,27 @@ html {
   font-weight: normal;
   font-style: italic;
   font-size: 42px;
+}
+#events .event .fa-external-link {
+  position: absolute;
+  height: 60px;
+  line-height: 60px;
+  margin-top: -30px;
+  top: 50%;
+  right: 50px;
+  color: #fffad5;
+  font-size: 45px;
+}
+#events .event .meta {
+  font-family: "Brandon Grotesque";
+  font-size: 24px;
+  line-height: 32px;
+  color: #105b63;
+  text-decoration: none;
+}
+#events .event .meta .fa {
+  width: 30px;
+  display: inline-block;
 }
 #nav {
   width: 100%;
