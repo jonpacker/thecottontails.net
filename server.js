@@ -46,6 +46,10 @@ app.get('/kurs', function(req, res) {
   res.render('kurs');
 });
 
+app.get('/lokaler', function(req, res) {
+  res.render('lokaler');
+});
+
 var server = app.listen(8059, function() {
   console.log('listening on ', server.address().address, server.address().port)
 });

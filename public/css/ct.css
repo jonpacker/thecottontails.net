@@ -3,7 +3,7 @@ html {
   margin: 0px;
   padding: 0px;
 }
-#hero {
+#index #hero {
   width: 100%;
   height: 500px;
   background-image: url("/img/dd.jpg");
@@ -13,7 +13,7 @@ html {
   background-position: center center;
   position: relative;
 }
-#hero #hero-title {
+#index #hero #hero-title {
   background-image: url("/img/title.svg");
   -webkit-background-size: contain;
   -moz-background-size: contain;
@@ -23,6 +23,68 @@ html {
   width: 65%;
   height: 100%;
   margin: 0 auto;
+}
+#lokaler #hero {
+  background-color: #105b63;
+  position: relative;
+  color: #fffad5;
+}
+#lokaler #hero .not-bg {
+  padding: 80px 30%;
+  text-align: center;
+}
+#lokaler #hero .bg {
+  background-image: url("/img/lokaler.jpg");
+  opacity: 0.1;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=10)";
+  filter: alpha(opacity=10);
+}
+#lokaler #hero h1 {
+  font-size: 54px;
+  font-family: "Playfair Display";
+  font-style: italic;
+  padding-bottom: 20px;
+  margin-bottom: 60px;
+  border-bottom: 2px solid #fffad5;
+}
+#lokaler #hero p {
+  font-family: "Brandon Grotesque";
+  font-size: 26px;
+  line-height: 42px;
+  padding: 0px 10%;
+  color: #ffd34e;
+}
+#lokaler #hero #entry {
+  padding: 0px 10% 80px;
+  position: relative;
+  zoom: 1;
+}
+#lokaler #hero #entry:before,
+#lokaler #hero #entry:after {
+  content: "";
+  display: table;
+}
+#lokaler #hero #entry:after {
+  clear: both;
+}
+#lokaler #hero #entry .map {
+  width: 55%;
+  margin-right: 5%;
+  float: left;
+}
+#lokaler #hero #entry .map img {
+  width: 100%;
+}
+#lokaler #hero #entry .entrydesc {
+  width: 40%;
+  font-family: "Brandon Grotesque";
+  font-size: 22px;
+  line-height: 32px;
+  color: #fffad5;
+  float: right;
+  padding: 40px 0px;
+  border-top: 2px solid #fffad5;
+  border-bottom: 2px solid #fffad5;
 }
 #nav {
   width: 100%;
@@ -442,6 +504,22 @@ html {
   font-weight: bold;
   width: 70px;
 }
+.bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  right: 0px;
+  background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+}
+.not-bg {
+  padding: 80px 20%;
+  z-index: 10;
+  position: relative;
+}
 #contact {
   background-color: #211f1c;
   color: #ffd34e;
@@ -452,24 +530,10 @@ html {
   position: relative;
 }
 #contact .bg {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  left: 0px;
-  right: 0px;
   background-image: url("/img/bergen-foot.jpg");
-  background-position: center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
   opacity: 0.1;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=10)";
   filter: alpha(opacity=10);
-}
-#contact .not-bg {
-  padding: 80px 20%;
-  z-index: 10;
-  position: relative;
 }
 #contact h1 {
   font-family: "Playfair Display";

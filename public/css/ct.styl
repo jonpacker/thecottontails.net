@@ -11,7 +11,7 @@ body,html
   margin 0px
   padding 0px
 
-#hero
+#index #hero
   width 100%
   height 500px
   background-image url(/img/dd.jpg)
@@ -27,6 +27,58 @@ body,html
     width 65%
     height 100%
     margin 0 auto
+
+#lokaler #hero
+  background-color cs_col5
+  position relative
+  color cs_col2
+
+  .not-bg
+    padding 80px 30%
+    text-align center
+  .bg
+    background-image url(/img/lokaler.jpg)
+    opacity 0.1
+
+  h1
+    font-size 54px
+    font-family "Playfair Display"
+    font-style italic
+    padding-bottom 20px
+    margin-bottom 60px
+    border-bottom 2px solid cs_col2
+
+  p
+    font-family "Brandon Grotesque"
+    font-size 26px
+    line-height 42px
+    padding 0px 10%
+    color cs_col3
+
+  #entry
+    padding 0px 10% 80px
+    position relative
+    clearfix()
+
+    .map
+      width 55%
+      margin-right 5%
+      float left
+      img 
+        width 100%
+    .entrydesc
+      width 40%
+      font-family "Brandon Grotesque"
+      font-size 22px
+      line-height 32px
+      color cs_col2
+      float right
+      padding 40px 0px
+      border-top 2px solid cs_col2
+      border-bottom @border-top
+
+
+
 
 #nav
   width 100%
@@ -375,6 +427,20 @@ body,html
       font-weight bold
       width 70px
 
+.bg
+  position absolute
+  width 100%
+  height 100%
+  left 0px
+  right 0px
+  background-position center
+  background-size cover
+    
+.not-bg
+  padding 80px 20%
+  z-index 10
+  position relative
+
 #contact
   background-color cs_col6
   color cs_col3
@@ -383,20 +449,8 @@ body,html
   position relative
 
   .bg
-    position absolute
-    width 100%
-    height 100%
-    left 0px
-    right 0px
     background-image url(/img/bergen-foot.jpg)
-    background-position center
-    background-size cover
     opacity 0.1
-      
-  .not-bg
-    padding 80px 20%
-    z-index 10
-    position relative
 
   h1
     font-family "Playfair Display"
