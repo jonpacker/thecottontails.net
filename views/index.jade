@@ -1,79 +1,49 @@
+include schedules
 extends layout
 block content
-  #nav
-    .left
-      .logo
-    .right.nav
-      .item Kurs
-      .item Lokaler
-      .item Hva skjer?
-      .item Om Lindy Hop og Oss
-  #hero
-    #hero-title
-  #portal
-    .box
-      .image(style="background-image: url(/img/kurs.jpg)")
-      .inner-box
-        h1 Kurs
-    .box
-      .image(style="background-image: url(/img/lokaler.jpg)")
-      .inner-box
-        h1 Lokaler
-    .box
-      .image(style="background-image: url(/img/hvaskjer.jpg)")
-      .inner-box
-        h1 Hva skjer?
-    .box
-      .image(style="background-image: url(/img/musikk.jpg)")
-      .inner-box
-        h1 Musikk
-  #about
-    .about-box
-      .blurb Vi er en danseklubb i Bergen som driver med amerikanske jazzdanser fra første halvdel av 1900-tallet, som <strong>Lindy Hop, Balboa og Charleston.</strong>
-  #feed
-    .content
-      h1 Vår nyhetsstrøm
-      .stories
-        each story in stories
-          .news
-            a.story(href=story.link) #{story.story} 
-              if story.link
-                .fa.fa-external-link-square
-            .date #{story.date.toString()}
-    .content.wider
-      .halfbox
-        h2 Ukentlig timeplan
-        .day
-          h3 Tirsdag
-          .set
-            .time 19:00
-            .desc Nivå 3
-            .location Asylbarnehagen
-          .set
-            .time 20:00
-            .desc Sosialdans
-            .location Asylbarnehagen
-          .set
-            .time 20:30
-            .desc Nivå 2
-            .location Asylbarnehagen
-        .day
-          h3 Torsdag
-          .set
-            .time 18:30
-            .desc Nivå 1
-            .location Asylbarnehagen
-          .set
-            .time 20:00
-            .desc Sosialdans
-            .location Asylbarnehagen
-      .halfbox.map
-        h2 Asylbarnehagen
-        .map
-        .explanation Explanation of where the gate and entrance is at Asylbarnehagen
-  #contact
-    h1 Get in touch
-    .contact-bits
-      a.email(href="mailto:post@thecottontails.net") post@thecottontails.net
-      .or — eller —
-      a.list(href="http://eepurl.com/OF8XT") Meld deg på vårt nyhetsbrev
+  #index
+    #hero
+      #hero-title
+    #portal
+      .box
+        .image(style="background-image: url(/img/kurs.jpg)")
+        .inner-box
+          h1 Kurs
+      .box
+        .image(style="background-image: url(/img/lokaler.jpg)")
+        .inner-box
+          h1 Lokaler
+      .box
+        .image(style="background-image: url(/img/hvaskjer.jpg)")
+        .inner-box
+          h1 Hva skjer?
+      .box
+        .image(style="background-image: url(/img/musikk.jpg)")
+        .inner-box
+          h1 Musikk
+    #about
+      .about-box
+        .blurb Vi er en danseklubb i Bergen som driver med amerikanske jazzdanser fra første halvdel av 1900-tallet, som <strong>Lindy Hop, Balboa og Charleston.</strong>
+    #feed
+      .content
+        h1 Vår nyhetsstrøm
+        .stories
+          each story in stories
+            .news
+              a.story(href=story.link) #{story.story} 
+                if story.link
+                  .fa.fa-external-link-square
+              .date #{story.date.toString()}
+      .content.wider
+        .halfbox
+          h2 Ukentlig timeplan
+          .day
+            h3 Tirsdag
+            mixin tuesday
+          .day
+            h3 Torsdag
+            mixin thursday
+        .halfbox.map
+          h2 Asylbarnehagen
+          .map
+          .explanation Explanation of where the gate and entrance is at Asylbarnehagen

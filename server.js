@@ -42,6 +42,10 @@ app.get('/', function(req, res) {
   res.render('index');
 });
 
+app.get('/kurs', function(req, res) {
+  res.render('kurs');
+});
+
 var server = app.listen(8059, function() {
   console.log('listening on ', server.address().address, server.address().port)
 });

@@ -1,5 +1,12 @@
 @import 'nib'
 
+cs_col1 = #BD4932 // colour
+cs_col2 = #FFFAD5 // light fg
+cs_col3 = #FFD34E // less light fg
+cs_col4 = #DB9E36 // colour
+cs_col5 = #105B63 // colour
+cs_col6 = #211f1c // dark bg
+
 body,html
   margin 0px
   padding 0px
@@ -24,8 +31,8 @@ body,html
 #nav
   width 100%
   height 80px
-  background-color #FFFAD5
-  color #211f1c
+  background-color cs_col2
+  color cs_col6
   font-family "Brandon Grotesque"
   font-size 22px
 
@@ -56,7 +63,7 @@ body,html
       padding 0px 20px
 
 #portal
-  background-color #105B63
+  background-color cs_col5
   width 100%
   padding 80px 20%
   box-sizing border-box
@@ -71,8 +78,8 @@ body,html
   .box
     width 47%
     height 400px
-    background-color #DB9E36
-    color #FFD34E
+    background-color cs_col4
+    color cs_col3
     text-align center
     font-size 22px
     font-family "Brandon Grotesque"
@@ -80,9 +87,9 @@ body,html
     margin-top 50px
     clear none
     position relative
-    background-color #FFFAD5
+    background-color cs_col2
     &:hover
-      background-color #FFD34E
+      background-color cs_col3
 
     .image
       width 100%
@@ -96,10 +103,10 @@ body,html
       opacity 0.5
 
     .inner-box 
-      color #211f1c
+      color cs_col6
       width 80%
       height 40%
-      border 6px solid #211f1c
+      border 6px solid cs_col6
       position absolute
       top 30%
       left 10%
@@ -128,7 +135,55 @@ body,html
     h1
       margin 0px
 
-#about
+#kurs #about
+  width 100%
+  padding 80px 20%
+  box-sizing border-box
+  background-color cs_col2
+
+  h1
+    font-size 54px 
+    font-family "Playfair Display"
+    font-style italic
+
+  p
+    padding 0px 5%
+    font-family "Brandon Grotesque"
+    font-size 28px
+    line-height 36px
+
+  .registration
+    display inline-block
+    padding 15px 40px
+    margin 20px 0px
+    font-size 36px
+    border 5px solid cs_col1
+    font-family "Brandon Grotesque"
+    font-weight bold
+    &:hover
+      color cs_col2
+      background-color cs_col1
+
+#kurs #levels
+  width 100%
+  padding-bottom 80px
+  background-color cs_col2
+  color cs_col6 
+  clearfix()
+
+  font-family "Brandon Grotesque"
+  font-size 22px
+
+  .main-overview
+    padding 0px 5%
+    font-family "Brandon Grotesque"
+    font-size 28px
+    line-height 36px
+  .halfbox
+    background-color cs_col3
+    color cs_col6
+
+#index #about
   width 100%
   display block
   position relative
@@ -136,7 +191,7 @@ body,html
   overflow visible
 
   .about-box
-    color #211f1c
+    color cs_col6
     background-image url(/img/fun.jpg)
     background-position center
     background-size cover
@@ -152,7 +207,7 @@ body,html
     position absolute
     left 50%
     top -200px
-    outline 6px solid #211f1c
+    outline 6px solid cs_col6
     outline-offset 40px
 
 
@@ -161,31 +216,35 @@ body,html
       margin 0 auto
       padding 80px 0px
 
+.content + .content
+  margin-top 80px
+.content
+  h1
+    font-family "Playfair Display"
+    font-style italic
+    font-size 54px
+    
+  width 60%
+  margin 0 auto
+
+  clearfix()
+
+  &.wider
+    width 80%
+
 #feed
   padding 80px 0px
   padding-top 240px + 80px
   width 100%
-  background-color #BD4932
+  background-color cs_col1
   clearfix()
 
-  .content + .content
-    margin-top 80px
   .content
-    width 60%
-    margin 0 auto
-    color #FFFAD5
+    color cs_col2
 
-    &.wider
-      width 80%
-
-    h1
-      font-family "Playfair Display"
-      font-style italic
-      font-size 54px
-    
     .stories
       padding 20px
-      border-left 1px solid #FFD34E
+      border-left 1px solid cs_col3
 
     .news
       margin-bottom 40px
@@ -204,10 +263,11 @@ body,html
           opacity 0.75
           font-size 0.8em
           color inherit
+
       .date 
         font-family "Brandon Grotesque"
         font-size 16px
-        color #FFD34E
+        color cs_col3
         position relative
         padding-left 20px
         margin-top 8px
@@ -220,79 +280,123 @@ body,html
           height 10px
           margin-top -10px
           border-bottom-left-radius 5px
-          border-bottom 1px solid #FFD34E
+          border-bottom 1px solid cs_col3
           border-left @border-bottom
 
-  .halfbox
-    width 48%
-    margin-right 5px
-    box-sizing border-box
-    border 6px solid #FFD34E
-    padding 40px
+#timeplan 
+  width 100%
+  padding 80px 0px
+  background-color cs_col1
+  color cs_col2
 
-    &:nth-of-type(1)
-      float left
-    &:nth-of-type(2)
-      float right
-      margin-top 200px
+  h2
+    font-family "Brandon Grotesque"
+    font-weight bold
+    font-style normal
 
-    h2, h3
-      font-family "Playfair Display"
-      margin-top 0px
-      font-weight 200
-      font-style italic
-    h2
-      font-size 42px
-    h3
-      font-size 26px
+  .set
+    font-size 24px
+
+    .time
+      width 100px
+
+    .location
+      display block
+      margin-top -4px
       margin-bottom 6px
-      margin-top 20px
-
-    .map
-      background-image url(/img/location.png)
-      background-size cover
-      background-position center
-      width 100%
-      height 350px
+      margin-left 105px
       opacity 0.5
-      margin-bottom 40px
+      font-size 0.6em
 
-    .explanation
-      color #FFD34E
-      font-family "Brandon Grotesque"
+  .halfbox:nth-of-type(2)
+    margin-top 100px
 
-    .set
-      font-family "Brandon Grotesque"
-      font-size 18px
 
-      .time 
-      .desc
-      .location
-        display inline-block
-        margin-right 5px
+.halfbox
+  width 48%
+  margin-right 5px
+  box-sizing border-box
+  border 6px solid cs_col3
+  padding 40px
 
-      .location:before
-        content '@'
-        font-size 0.6em
+  &:nth-of-type(1)
+    float left
+  &:nth-of-type(2)
+    float right
+    margin-top 200px
 
-      .location
-        font-size 0.8em
-        opacity 0.7
+  h2, h3
+    font-family "Playfair Display"
+    margin-top 0px
+    font-weight 200
+    font-style italic
+  h2
+    font-size 42px
+  h3
+    font-size 26px
+    margin-bottom 6px
+    margin-top 20px
 
-      .time
-      .location
-        color #FFD34E
+  .map
+    background-image url(/img/location.png)
+    background-size cover
+    background-position center
+    width 100%
+    height 350px
+    opacity 0.5
+    margin-bottom 40px
 
-      .time
-        font-weight bold
-        width 60px
+  .explanation
+    color cs_col3
+    font-family "Brandon Grotesque"
+
+  .set
+    font-family "Brandon Grotesque"
+    font-size 18px
+
+    .time 
+    .desc
+    .location
+      display inline-block
+      margin-right 5px
+
+    .location:before
+      font-size 0.6em
+
+    .location
+      font-size 0.8em
+      opacity 0.7
+
+    .time
+    .location
+      color cs_col3
+
+    .time
+      font-weight bold
+      width 70px
 
 #contact
-  background-color #211f1c
-  color #FFD34E
+  background-color cs_col6
+  color cs_col3
   width 100%
-  padding 80px 20%
   box-sizing border-box
+  position relative
+
+  .bg
+    position absolute
+    width 100%
+    height 100%
+    left 0px
+    right 0px
+    background-image url(/img/bergen-foot.jpg)
+    background-position center
+    background-size cover
+    opacity 0.1
+      
+  .not-bg
+    padding 80px 20%
+    z-index 10
+    position relative
 
   h1
     font-family "Playfair Display"
@@ -301,6 +405,23 @@ body,html
 
   .contact-bits
     text-align center
+
+  .social-bits
+    text-align center
+    margin-top 40px
+    border-top 2px solid cs_col1
+    padding-top 80px
+    .bit
+      color cs_col2
+      border 5px solid cs_col1
+      padding 20px 30px
+      font-size 42px
+      display inline-block
+      margin 0px 20px
+      text-decoration none
+      &:hover
+        background-color cs_col1
+
 
   .or
     font-size 24px
@@ -311,15 +432,15 @@ body,html
 
   .email
   .list
-    color #FFFAD5
+    color cs_col2
     display inline-block
     padding 15px 40px
-    border 5px solid #FFD34E
+    border 5px solid cs_col3
     text-decoration none
     font-family "Brandon Grotesque"
     font-size 32px
     margin 40px 0px
 
     &:hover
-      background-color #FFD34E
-      color #211f1c
+      background-color cs_col3
+      color cs_col6
