@@ -8,12 +8,12 @@ html
   body
     #nav
       .left
-        .logo
+        a.logo(href="/")
       .right.nav
-        .item Kurs
-        .item Lokaler
-        .item Hva skjer?
-        .item Om Lindy Hop og Oss
+        a.item(href="/kurs", class=current == 'courses' ? 'active' : '') Kurs
+        a.item(href="/lokaler", class=current == 'locations' ? 'active' : '') Lokaler
+        a.item(href="/hvaskjer", class=current == 'events' ? 'active' : '') Hva skjer?
+        a.item(href="/om", class=current == 'about' ? 'active' : '') Om Lindy Hop og Oss
     block content
     #contact
       .bg

@@ -110,22 +110,27 @@ app.get('/', function(req, res) {
 });
 
 app.get('/kurs', function(req, res) {
+  res.locals.current = 'courses';
   res.render('kurs');
 });
 
 app.get('/lokaler', function(req, res) {
+  res.locals.current = 'locations';
   res.render('lokaler');
 });
 
 app.get('/hvaskjer', function(req, res) {
+  res.locals.current = 'events';
   res.render('events');
 });
 
 app.get('/om', function(req, res) {
+  res.locals.current = 'about';
   res.render('about');
 });
 
 app.get('/musikk', function(req, res) {
+  res.locals.current = 'music';
   res.render('music');
 });
 

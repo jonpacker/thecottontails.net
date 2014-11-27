@@ -353,12 +353,18 @@ html {
   font-family: "Brandon Grotesque";
   font-size: 22px;
 }
+#nav a {
+  text-decoration: none;
+  border: none;
+  color: inherit;
+}
 #nav .left {
   float: left;
   height: 80px;
   padding-left: 20px;
 }
 #nav .left .logo {
+  display: block;
   background-image: url("/img/ct_new_nothe.svg");
   -webkit-background-size: contain;
   -moz-background-size: contain;
@@ -378,9 +384,24 @@ html {
 #nav .nav .item {
   vertical-align: top;
   display: inline-block;
-  height: 80px;
-  line-height: 80px;
-  padding: 0px 20px;
+  height: 50px;
+  margin-top: 15px;
+  margin-left: 5px;
+  margin-right: 5px;
+  line-height: 44px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 3px 18px;
+}
+#nav .nav .item:hover {
+  border-bottom: 3px solid #db9e36;
+  padding-bottom: 0px;
+}
+#nav .nav .item.active {
+  padding: 0px 15px;
+  border: 3px solid #105b63;
+  color: #105b63;
 }
 #portal {
   background-color: #105b63;
