@@ -6,6 +6,7 @@ html
     link(rel='stylesheet', href='/css/font-awesome.min.css')
     link(rel='stylesheet', href='/css/ct.css')
   body
+    block prenav
     #nav
       .left
         a.logo(href="/")
@@ -13,6 +14,7 @@ html
         a.item(href="/kurs", class=current == 'courses' ? 'active' : '') Kurs
         a.item(href="/lokaler", class=current == 'locations' ? 'active' : '') Lokaler
         a.item(href="/hvaskjer", class=current == 'events' ? 'active' : '') Hva skjer?
+        a.item(href="/musikk", class=current == 'music' ? 'active' : '') Musikk
         a.item(href="/om", class=current == 'about' ? 'active' : '') Om Lindy Hop og Oss
     block content
     #contact

@@ -3,9 +3,13 @@ html {
   margin: 0px;
   padding: 0px;
 }
+body {
+  min-width: 320px;
+}
 #index #hero {
   width: 100%;
   height: 500px;
+  padding-top: 80px;
   background-image: url("/img/dd.jpg");
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -210,6 +214,9 @@ html {
   content: '';
   display: block;
 }
+#about .dance#lindyhop video {
+  margin-top: 1%;
+}
 #about .dance .videobg {
   width: 100%;
   z-index: 0;
@@ -403,6 +410,13 @@ html {
   border: 3px solid #105b63;
   color: #105b63;
 }
+.index + #nav {
+  position: absolute;
+  background: transparent;
+  left: 0px;
+  top: 0px;
+  z-index: 5;
+}
 #portal {
   background-color: #105b63;
   width: 100%;
@@ -590,6 +604,39 @@ html {
   width: 50%;
   margin: 0 auto;
   padding: 80px 0px;
+}
+@media (max-width: 1024px) {
+  #index #about .about-box .blurb {
+    width: 75%;
+  }
+}
+@media (max-width: 480px) {
+  #index #about .about-box .blurb {
+    font-size: 24px;
+    width: 85%;
+    padding: 60px 0px;
+  }
+}
+@media (max-width: 1280px) {
+  #index #about {
+    height: auto;
+  }
+  #index #about .about-box {
+    outline: none;
+    top: 0px;
+    width: 100%;
+    height: auto;
+    margin-left: 0px;
+    left: 0px;
+    position: relative;
+  }
+  #index #portal {
+    padding-bottom: 80px;
+  }
+  #index #feed {
+    margin-top: 0px;
+    padding-top: 80px;
+  }
 }
 .content + .content {
   margin-top: 80px;

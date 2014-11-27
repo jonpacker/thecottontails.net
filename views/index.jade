@@ -1,29 +1,35 @@
 include schedules
 extends layout
+block prenav
+  .index
 block content
   #index
     #hero
       #hero-title
     #portal
-      .box
+      a.box(href="/kurs")
         .image(style="background-image: url(/img/kurs.jpg)")
         .inner-box
           h1 Kurs
-      .box
+      a.box(href="/lokaler")
         .image(style="background-image: url(/img/lokaler.jpg)")
         .inner-box
           h1 Lokaler
-      .box
+      a.box(href="/hvaskjer")
         .image(style="background-image: url(/img/hvaskjer.jpg)")
         .inner-box
           h1 Hva skjer?
-      .box
+      a.box(href="/om")
+        .image(style="background-image: url(/img/manning.jpg)")
+        .inner-box
+          h1 Dansene
+      a.box(href="/musikk")
         .image(style="background-image: url(/img/musikk.jpg)")
         .inner-box
           h1 Musikk
     #about
       .about-box
-        .blurb Vi er en danseklubb i Bergen som driver med amerikanske jazzdanser fra første halvdel av 1900-tallet, som <strong>Lindy Hop, Balboa og Charleston.</strong>
+        .blurb Cottontails er en danseklubb i Bergen som driver med amerikanske jazzdanser fra første halvdel av 1900-tallet, som <strong>Lindy Hop, Balboa og Charleston.</strong>
     #feed
       .content
         h1 Vår nyhetsstrøm

@@ -1,6 +1,6 @@
 extends layout
 mixin dance(title, video, autoplay)
-  .dance.muted(attributes)
+  .dance.muted&attributes(attributes)
     .videobg
       - var vattrs = autoplay ? { autoplay: 'autoplay' } : {};
       video(controls=false, loop, muted)&attributes(vattrs)
