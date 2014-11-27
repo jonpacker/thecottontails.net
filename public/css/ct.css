@@ -147,6 +147,204 @@ html {
   width: 30px;
   display: inline-block;
 }
+#about > div {
+  padding: 80px 10%;
+  zoom: 1;
+  color: #211f1c;
+}
+#about > div:before,
+#about > div:after {
+  content: "";
+  display: table;
+}
+#about > div:after {
+  clear: both;
+}
+#about h1 {
+  font-family: "Playfair Display";
+  font-size: 54px;
+  font-style: italic;
+}
+#about p {
+  font-family: "Brandon Grotesque";
+  font-size: 24px;
+  line-height: 32px;
+  padding: 0px 5%;
+}
+#about #cottontails {
+  background-color: #fffad5;
+  color: #211f1c;
+}
+#about #cottontails h1 {
+  margin-bottom: 60px;
+}
+#about #cottontails .logo {
+  float: left;
+  margin-top: -20px;
+  width: 200px;
+  margin-right: 40px;
+}
+#about #heading {
+  padding: 80px 0px;
+}
+#about .dance,
+#about .dance-head {
+  background-color: #211f1c;
+  color: #fffad5;
+  padding: 0px;
+  position: relative;
+  width: 100%;
+  text-align: center;
+}
+#about .dance h1.really-big,
+#about .dance-head h1.really-big {
+  font-size: 128px;
+  font-weight: normal;
+  border-bottom: 2px solid #fffad5;
+  width: 50%;
+  margin: 0 auto;
+  padding-bottom: 40px;
+}
+#about .dance:after {
+  padding-top: 50%;
+  content: '';
+  display: block;
+}
+#about .dance .videobg {
+  width: 100%;
+  z-index: 0;
+  position: absolute;
+  left: 0;
+  overflow: hidden;
+  opacity: 1;
+  -ms-filter: none;
+  filter: none;
+  -webkit-transition: opacity 150ms ease-out;
+  -moz-transition: opacity 150ms ease-out;
+  -o-transition: opacity 150ms ease-out;
+  -ms-transition: opacity 150ms ease-out;
+  transition: opacity 150ms ease-out;
+}
+#about .dance .videobg video {
+  width: 100%;
+  margin-top: -2.25%;
+}
+#about .dance .not-videobg {
+  zoom: 1;
+  position: absolute;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  text-align: center;
+}
+#about .dance .not-videobg:before,
+#about .dance .not-videobg:after {
+  content: "";
+  display: table;
+}
+#about .dance .not-videobg:after {
+  clear: both;
+}
+#about .dance .not-videobg:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+#about .dance .not-videobg .caption {
+  display: inline-block;
+  vertical-align: middle;
+  height: 60%;
+  width: 50%;
+  position: relative;
+  -webkit-transition: opacity 150ms ease-out;
+  -moz-transition: opacity 150ms ease-out;
+  -o-transition: opacity 150ms ease-out;
+  -ms-transition: opacity 150ms ease-out;
+  transition: opacity 150ms ease-out;
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+}
+#about .dance .not-videobg .caption h1 {
+  margin-top: 0px;
+  font-size: 84px;
+}
+#about .dance .not-videobg .caption p {
+  font-size: 24px;
+  line-height: 32px;
+  padding: 0px;
+}
+#about .dance .not-videobg .unmute-button {
+  font-size: 30px;
+  position: absolute;
+  top: 40px;
+  cursor: pointer;
+  left: 40px;
+  color: #ffd34e;
+}
+#about .dance .not-videobg .unmute-button .fa-inverse {
+  color: #211f1c;
+}
+#about .dance h1.while-playing {
+  font-size: 34px;
+  font-family: "Playfair Display";
+  font-style: italic;
+  text-align: right;
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  width: 40%;
+  opacity: 1;
+  -ms-filter: none;
+  filter: none;
+  margin: 0px;
+  padding: 0px;
+  -webkit-transition: opacity 150ms ease-out;
+  -moz-transition: opacity 150ms ease-out;
+  -o-transition: opacity 150ms ease-out;
+  -ms-transition: opacity 150ms ease-out;
+  transition: opacity 150ms ease-out;
+}
+#about .dance.muted .videobg {
+  opacity: 0.1;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=10)";
+  filter: alpha(opacity=10);
+}
+#about .dance.muted h1.while-playing {
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+}
+#about .dance.muted .caption {
+  opacity: 1;
+  -ms-filter: none;
+  filter: none;
+}
+#about .video {
+  margin-left: 5%;
+  float: left;
+  width: 44%;
+}
+#about .video video {
+  width: 100%;
+}
+#about .video video[muted] {
+  opacity: 0.5;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+  filter: alpha(opacity=50);
+}
+#about .text {
+  margin-right: 5%;
+  float: right;
+  width: 44%;
+}
+#about .text p {
+  margin-top: 0px;
+}
 #nav {
   width: 100%;
   height: 80px;

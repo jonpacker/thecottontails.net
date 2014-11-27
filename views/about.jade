@@ -1,0 +1,80 @@
+extends layout
+mixin dance(title, video, autoplay)
+  .dance.muted(attributes)
+    .videobg
+      - var vattrs = autoplay ? { autoplay: 'autoplay' } : {};
+      video(controls=false, loop, muted)&attributes(vattrs)
+        source(src="/vid/#{video}.mp4", type="video/mp4")
+        source(src="/vid/#{video}.webm", type="video/webm")
+    .not-videobg
+      .fa-stack.unmute-button
+        .fa.fa-circle.fa-stack-2x
+        .fa.fa-volume-up.fa-stack-1x.fa-inverse.mute-icon
+      h1.while-playing= title
+      .caption
+        h1= title
+        block
+block content
+  #about
+    #cottontails
+      h1 Om Cottontails
+      img(src="/img/ct_new_nothe.svg").logo
+      p The Cottontails er en danseklubb i Bergen som driver med amerikanske jazzdanser fra første halvdel av 1900-tallet, som Lindy Hop, Balboa og Charleston.
+      p Vårt hovedfokus er på sosialdans, og rett og slett å ha det gøy når man danser!
+    #heading.dance-head
+      h1.really-big Dansene
+
+    +dance('Lindy Hop', 'michael_frida_web', true)#lindyhop
+      p Denne partnerdansen oppsto på danseklubbene i 20-og 30-tallets Harlem, New York, og regnes som den originale swing-dansen. Den er energisk og kreativ, og til tider høytflyvende. Vi danser til swingende jazz, fra Ella og Billie, the Duke, the Count og Prez. Kanskje tilogmed yngre kids som Flip Phillips og Gerry Mulligan.
+
+    +dance('Autentisk Jazz', 'rock_it_for_me_web')#authenticjazz
+      p Autentisk jazz er en partnerløs dans fra swing-alderen. Vi danser solo eller i grupper, improvisert eller koreografert. Vi snakker om jazz-trinn som Susie Q, Fall Off the Log, Spank the Baby og Charleston. Dette energetisk, eksentrisk og ekstatisk. Let’s boogie like it's 1933!
+
+    +dance('Balboa', 'mickey_kelly_web')#balboa
+      p Balboa er fra samme periode som Lindy Hop og dansens til samme musikk . Denne dansen oppsto i syd-California, da dansegulvet ble så fullt at det ikke var plass til å swinge partneren av gårde. Her danser man i tett lukket posisjon, men stor vekt på føring og følging, og på fotarbeid. Og du kan danse hele natten til rask musikk uten å bli sliten! Glatte glatte sko anbefales, gjerne med litt hel for damene.
+
+    +dance('Collegiate Shag', 'stephen_chandrae_web')#shag
+      p Collegiate Shag er en dans som jeg har ingen tekst om. Nå skal jeg gå og plage Magnus sånn at han kan skrive noe om det. Biodiesel wayfarers tousled fap pug cronut viral raw denim. Fixie retro flannel, butcher iPhone whatever four loko. Mixtape direct trade blog, Tonx banh mi plaid McSweeney's chillwave readymade Shoreditch cray. 
+
+block scripts
+  script(type='text/javascript', src='/js/waypoints.min.js')
+  script(type='text/javascript').
+    var focusVideo = function(video) {
+      if (!video.paused) return;
+      video.play();
+      $('.videobg video').not($(video)).each(function() {
+        this.pause();
+        this.muted = true;
+      });
+    };
+    var waypointHandler = function() { focusVideo(this) }
+    $('.videobg video').each(function() {
+      var parent = $(this).parents('.dance');
+      var muted = true;
+      $(this).on('volumechange', function() {
+        if (this.muted && !muted) { 
+          parent.trigger('mute'); 
+          muted = true;
+        } else if (!this.muted && muted) {
+          parent.trigger('unmute');
+          muted = false;
+        }
+      });
+    }).waypoint(waypointHandler, {offset: 100})
+    $('.unmute-button').on('click', function() {
+      var video = $(this).parents('.dance').find('video')[0];
+      video.muted = !video.muted;
+    });
+    $('.dance').on('mute', function() {
+      console.log('fire')
+      var self = $(this);
+      self.addClass('muted');
+      self.find('.mute-icon').removeClass('fa-volume-off').addClass('fa-volume-up');
+    }).on('unmute', function() {
+      var self = $(this);
+      self.removeClass('muted');
+      self.find('.mute-icon').addClass('fa-volume-off').removeClass('fa-volume-up');
+      var video = self.find('video')[0];
+      if (video.paused) focusVideo(video);
+    });
+
