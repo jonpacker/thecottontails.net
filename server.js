@@ -5,6 +5,12 @@ var nib = require('nib');
 var request = require('request');
 var moment = require('moment')
 var _ = require('underscore');
+var SpotifyWebApi = require('spotify-web-api-node');
+
+var spotify = new SpotifyWebApi({
+  clientId: '28f48569ef90450fb4b263a93e7ae19e',
+  clientSecret: 'bbe1b0f25a5446b49d486f7f3abb1acc'
+});
 
 app.set('view engine', 'jade');
 app.set('views', __dirname + '/views');
@@ -87,6 +93,12 @@ request(accessTokenUrl, function(err, res) {
   });
 });
 
+spotify.clientCredentialsGrant().then(function(data) {
+  spotify.setAccessToken(data['access_token']);
+  spotify.getUserPlaylists('thecottontails').then(function(data) {
+    console.log(data);
+  }, function(err) { console.log('failed to get playlists', err) });
+}, function(err) { console.log('failed to grant client credentials', err) });
 
 app.get('/', function(req, res) {
   res.render('index');
@@ -102,6 +114,10 @@ app.get('/lokaler', function(req, res) {
 
 app.get('/hvaskjer', function(req, res) {
   res.render('events');
+});
+
+app.get('/om', function(req, res) {
+  res.render('about');
 });
 
 var server = app.listen(8059, function() {
