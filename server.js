@@ -96,7 +96,12 @@ request(accessTokenUrl, function(err, res) {
 spotify.clientCredentialsGrant().then(function(data) {
   spotify.setAccessToken(data['access_token']);
   spotify.getUserPlaylists('thecottontails').then(function(data) {
-    console.log(data);
+    app.locals.playlists = data.items;
+    app.locals.playlists.forEach(function(playlist) {
+      spotify.getUser(encodeURIComponent(playlist.owner.id)).then(function(user) {
+        playlist.owner.display_name = user.display_name;
+      }, function(err) { console.log('couldnt fetch', playlist.owner.id, err) });
+    });
   }, function(err) { console.log('failed to get playlists', err) });
 }, function(err) { console.log('failed to grant client credentials', err) });
 
@@ -118,6 +123,10 @@ app.get('/hvaskjer', function(req, res) {
 
 app.get('/om', function(req, res) {
   res.render('about');
+});
+
+app.get('/musikk', function(req, res) {
+  res.render('music');
 });
 
 var server = app.listen(8059, function() {

@@ -136,9 +136,6 @@ body,html
         width 30px
         display inline-block
 
-#index + #contact
-
-
 #about
   & > div
     padding 80px 10%
@@ -549,6 +546,62 @@ body,html
           border-bottom 1px solid cs_col3
           border-left @border-bottom
 
+#playlists
+  background-color cs_col2
+  color cs_col5
+  padding 80px 20%
+
+  h1 
+    font-size 54px
+    font-family "Playfair Display"
+    font-style italic
+
+  p
+    font-size 24px
+    line-height 32px
+    font-family "Brandon Grotesque"
+  .playlists
+    margin-top 80px
+
+  .playlist
+    margin 20px auto
+    box-sizing border-box
+    width 92%
+    display block
+    text-decoration none
+    color inherit
+    border 5px solid cs_col1
+    padding 24px 60px
+    position relative
+
+    &:hover
+      background-color cs_col1
+      color cs_col2
+
+    h2
+      margin 0px
+      font-size 44px
+      font-family "Playfair Display"
+      font-style italic
+      font-weight normal
+
+    p
+      margin 0px 
+
+    .fa
+      position absolute
+      height 150px
+      width 130px
+      overflow hidden
+      line-height 200px
+      bottom 0px
+      right 0px
+      text-align right
+      color rgba(cs_col2, 25%)
+      font-size 200px
+
+
+
 #timeplan 
   width 100%
   padding 80px 0px
@@ -670,9 +723,11 @@ body,html
     font-family "Playfair Display"
     font-size 54px
     font-style italic
+    display none
 
   .contact-bits
     text-align center
+    display none
 
   .social-bits
     text-align center
@@ -712,3 +767,10 @@ body,html
     &:hover
       background-color cs_col3
       color cs_col6
+
+#index + #contact
+  h1
+    display block
+  .contact-bits
+    display block
+

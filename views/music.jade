@@ -1,0 +1,13 @@
+extends layout
+block content
+  #playlists
+    h1 Playlists
+    p We mostly manage our playlists by spotify, and encourage our DJs to share them, so that you can find the music you dance to and really get to know it in your own time.
+    .playlists
+      each playlist in playlists
+        - if (playlist.tracks.total == 0) continue;
+        a.playlist(href=playlist.external_urls.spotify, target="blank")
+          h2= playlist.name
+          p #{playlist.tracks.total} songs, made by <strong>#{playlist.owner.display_name || playlist.owner.id}</strong>
+          .fa.fa-spotify
+  

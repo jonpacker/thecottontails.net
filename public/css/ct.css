@@ -658,6 +658,63 @@ html {
   border-bottom: 1px solid #ffd34e;
   border-left: 1px solid #ffd34e;
 }
+#playlists {
+  background-color: #fffad5;
+  color: #105b63;
+  padding: 80px 20%;
+}
+#playlists h1 {
+  font-size: 54px;
+  font-family: "Playfair Display";
+  font-style: italic;
+}
+#playlists p {
+  font-size: 24px;
+  line-height: 32px;
+  font-family: "Brandon Grotesque";
+}
+#playlists .playlists {
+  margin-top: 80px;
+}
+#playlists .playlist {
+  margin: 20px auto;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 92%;
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  border: 5px solid #bd4932;
+  padding: 24px 60px;
+  position: relative;
+}
+#playlists .playlist:hover {
+  background-color: #bd4932;
+  color: #fffad5;
+}
+#playlists .playlist h2 {
+  margin: 0px;
+  font-size: 44px;
+  font-family: "Playfair Display";
+  font-style: italic;
+  font-weight: normal;
+}
+#playlists .playlist p {
+  margin: 0px;
+}
+#playlists .playlist .fa {
+  position: absolute;
+  height: 150px;
+  width: 130px;
+  overflow: hidden;
+  line-height: 200px;
+  bottom: 0px;
+  right: 0px;
+  text-align: right;
+  color: rgba(255,250,213,0.25);
+  font-size: 200px;
+}
 #timeplan {
   width: 100%;
   padding: 80px 0px;
@@ -798,9 +855,11 @@ html {
   font-family: "Playfair Display";
   font-size: 54px;
   font-style: italic;
+  display: none;
 }
 #contact .contact-bits {
   text-align: center;
+  display: none;
 }
 #contact .social-bits {
   text-align: center;
@@ -846,4 +905,10 @@ html {
 #contact .list:hover {
   background-color: #ffd34e;
   color: #211f1c;
+}
+#index + #contact h1 {
+  display: block;
+}
+#index + #contact .contact-bits {
+  display: block;
 }
