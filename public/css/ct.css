@@ -680,6 +680,11 @@ body {
 #feed .content {
   color: #fffad5;
 }
+@media (max-width: 480px) {
+  #feed .content {
+    width: 80%;
+  }
+}
 #feed .content .stories {
   padding: 20px;
   border-left: 1px solid #ffd34e;
@@ -813,6 +818,11 @@ body {
 #timeplan .halfbox:nth-of-type(2) {
   margin-top: 100px;
 }
+@media (max-width: 720px) {
+  #timeplan .halfbox:nth-of-type(2) {
+    margin-top: 40px;
+  }
+}
 .halfbox {
   width: 48%;
   margin-right: 5px;
@@ -828,6 +838,20 @@ body {
 .halfbox:nth-of-type(2) {
   float: right;
   margin-top: 200px;
+}
+@media (max-width: 1024px) {
+  .halfbox {
+    width: 100%;
+    margin-right: 0px;
+    float: none;
+  }
+  .halfbox:nth-of-type(1) {
+    float: none;
+  }
+  .halfbox:nth-of-type(2) {
+    float: none;
+    margin-top: 40px;
+  }
 }
 .halfbox h2,
 .halfbox h3 {
@@ -933,7 +957,7 @@ body {
   text-align: center;
   margin-top: 40px;
   border-top: 2px solid #bd4932;
-  padding-top: 80px;
+  padding-top: 40px;
 }
 #contact .social-bits .bit {
   color: #fffad5;
@@ -941,7 +965,7 @@ body {
   padding: 20px 30px;
   font-size: 42px;
   display: inline-block;
-  margin: 0px 20px;
+  margin: 40px 20px 0px;
   text-decoration: none;
 }
 #contact .social-bits .bit:hover {
@@ -973,6 +997,11 @@ body {
 #contact .list:hover {
   background-color: #ffd34e;
   color: #211f1c;
+}
+@media (max-width: 620px) {
+  #contact .email {
+    font-size: 22px;
+  }
 }
 #index + #contact h1 {
   display: block;
