@@ -1,0 +1,45 @@
+{
+  "en": {
+    "nav": {
+      "courses": "Courses",
+      "location": "Location",
+      "whats_happening": "Upcoming Events",
+      "music": "Music",
+      "about": "About Lindy Hop and Us"
+    },
+    "portal": {
+      "courses": "Courses",
+      "location": "Location",
+      "whats_happening": "Events",
+      "music": "Music",
+      "about": "The Dances"
+    },
+    "news_stream": "Our newsfeed",
+    "weekly_schedule": "Schedule",
+    "contact_us": "Get in touch",
+    "newsletter": "Sign up for our newsletter",
+    "or": "or"
+  },
+  "nb": {
+    "nav": {
+      "courses": "Kurs",
+      "location": "Lokaler",
+      "whats_happening": "Hva skjer?",
+      "music": "Musikk",
+      "about": "Om Lindy Hop og Oss"
+    },
+    "portal": {
+      "courses": "Kurs",
+      "location": "Lokaler",
+      "whats_happening": "Hva skjer?",
+      "music": "Musikk",
+      "about": "Dansene"
+    },
+    "news_stream": "Vår nyhetsstrøm",
+    "weekly_schedule": "Timeplan",
+    "contact_us": "Kontakt oss",
+    "newsletter": "Meld deg på vårt nyhetsbrev",
+    "or": "eller"
+  }
+
+}

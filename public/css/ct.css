@@ -441,6 +441,21 @@ body {
 #portal:after {
   clear: both;
 }
+@media (max-width: 1024px) {
+  #portal {
+    padding: 80px 10%;
+  }
+}
+@media (max-width: 1024px) {
+  #portal {
+    padding: 80px 20%;
+  }
+}
+@media (max-width: 480px) {
+  #portal {
+    padding: 80px 10%;
+  }
+}
 #portal .box {
   width: 47%;
   height: 400px;
@@ -454,6 +469,7 @@ body {
   clear: none;
   position: relative;
   background-color: #fffad5;
+  display: block;
 }
 #portal .box:hover {
   background-color: #ffd34e;
@@ -506,6 +522,24 @@ body {
 }
 #portal .box:nth-child(2) {
   margin-top: 150px;
+}
+@media (max-width: 768px) {
+  #portal .box {
+    width: 100%;
+    margin-top: 40px;
+  }
+  #portal .box:nth-child(2n) {
+    float: none;
+  }
+  #portal .box:nth-child(2n-1) {
+    float: none;
+  }
+  #portal .box:nth-child(1) {
+    margin-top: 0px;
+  }
+  #portal .box:nth-child(2) {
+    margin-top: 40px;
+  }
 }
 #portal .box h1 {
   margin: 0px;
@@ -601,9 +635,16 @@ body {
   outline-offset: 40px;
 }
 #index #about .about-box .blurb {
-  width: 50%;
+  width: 55%;
   margin: 0 auto;
   padding: 80px 0px;
+}
+#index #about .about-box .blurb p {
+  font-family: inherit;
+  font-size: inherit;
+  margin: 0px;
+  padding: 0px;
+  line-height: inherit;
 }
 @media (max-width: 1024px) {
   #index #about .about-box .blurb {
@@ -860,6 +901,11 @@ body {
   font-weight: 200;
   font-style: italic;
 }
+.halfbox h2 p,
+.halfbox h3 p {
+  margin: 0px;
+  padding: 0px;
+}
 .halfbox h2 {
   font-size: 42px;
 }
@@ -885,9 +931,17 @@ body {
   color: #ffd34e;
   font-family: "Brandon Grotesque";
 }
+.halfbox .explanation p {
+  padding: 0px;
+  margin: 0px;
+}
 .halfbox .set {
   font-family: "Brandon Grotesque";
   font-size: 18px;
+}
+.halfbox .set p {
+  margin: 0px;
+  padding: 0px;
 }
 .halfbox .set .time,
 .halfbox .set .desc,

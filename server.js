@@ -6,6 +6,9 @@ var request = require('request');
 var moment = require('moment')
 var _ = require('underscore');
 var SpotifyWebApi = require('spotify-web-api-node');
+var data = require('./data');
+var locale = require('locale');
+var strings = require('./strings.json');
 
 var spotify = new SpotifyWebApi({
   clientId: '28f48569ef90450fb4b263a93e7ae19e',
@@ -22,6 +25,14 @@ app.use(stylus.middleware({
   }
 }));
 app.use(express.static(__dirname + "/public"));
+app.use(locale(['en', 'nb']));
+app.use(function(req, res, next) {
+  if (req.query.locale == 'nb' || req.query.locale == 'en') req.locale = req.query.locale;
+  if (!req.locale) req.locale = 'nb';
+  res.locals = _.extend(res.locals, strings[req.locale]);
+  res.locals.locale = req.locale;
+  next();
+});
 
 moment.locale('nb')
 
@@ -40,13 +51,22 @@ function parseEvent(event) {
     link: 'https://www.facebook.com/events/' + event.id
   };
   if (!event.end_time) {
-    parsed.when = moment(event.start_time).format('LT, Do MMMM')
+    parsed.when = {
+      nb: moment(event.start_time).locale('nb').format('LT, Do MMMM'),
+      en: moment(event.start_time).locale('en').format('LT, Do MMMM')
+    }
   } else {
     var start = moment(event.start_time), end = moment(event.end_time);
     if (start.dayOfYear() == end.dayOfYear()) {
-      parsed.when = start.format('LT') + '-' + end.format('LT, Do MMMM');
+      parsed.when = {
+        nb: start.locale('nb').format('LT') + '-' + end.locale('nb').format('LT, Do MMMM'),
+        en: start.locale('en').format('LT') + '-' + end.locale('en').format('LT, Do MMMM')
+      };
     } else {
-      parsed.when = start.format('Do MMMM') + '-' + end.format('Do MMMM');
+      parsed.when = {
+        nb: start.locale('nb').format('Do MMMM') + '-' + end.locale('nb').format('Do MMMM'),
+        en: start.locale('en').format('Do MMMM') + '-' + end.locale('en').format('Do MMMM')
+      };
     }
   }
   app.locals.events.push(parsed);
@@ -79,7 +99,10 @@ request(accessTokenUrl, function(err, res) {
     }).map(function(post) {
       return {
         story: post.message,
-        date: moment(post.created_time).format('Do MMMM'),
+        date: {
+          nb: moment(post.created_time).locale('nb').format('Do MMMM'),
+          en: moment(post.created_time).locale('en').format('Do MMMM')
+        },
         link: post.link
       };
     }).slice(0,5);
@@ -106,7 +129,14 @@ spotify.clientCredentialsGrant().then(function(data) {
 }, function(err) { console.log('failed to grant client credentials', err) });
 
 app.get('/', function(req, res) {
-  res.render('index');
+  data([
+    'club_overview_text',
+    'schedule',
+    'asylbarnehagen'
+  ], req.locale, function(e, locals) {
+    if (e) return res.send(500, e);
+    res.render('index', locals);
+  });
 });
 
 app.get('/kurs', function(req, res) {

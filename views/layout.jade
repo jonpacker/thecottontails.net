@@ -11,20 +11,20 @@ html
       .left
         a.logo(href="/")
       .right.nav
-        a.item(href="/kurs", class=current == 'courses' ? 'active' : '') Kurs
-        a.item(href="/lokaler", class=current == 'locations' ? 'active' : '') Lokaler
-        a.item(href="/hvaskjer", class=current == 'events' ? 'active' : '') Hva skjer?
-        a.item(href="/musikk", class=current == 'music' ? 'active' : '') Musikk
-        a.item(href="/om", class=current == 'about' ? 'active' : '') Om Lindy Hop og Oss
+        a.item(href="/kurs", class=current == 'courses' ? 'active' : '')= nav.courses
+        a.item(href="/lokaler", class=current == 'locations' ? 'active' : '')= nav.location
+        a.item(href="/hvaskjer", class=current == 'events' ? 'active' : '')= nav.whats_happening
+        a.item(href="/musikk", class=current == 'music' ? 'active' : '')= nav.music
+        a.item(href="/om", class=current == 'about' ? 'active' : '')= nav.about
     block content
     #contact
       .bg
       .not-bg
-        h1 Get in touch
+        h1= contact_us
         .contact-bits
           a.email(href="mailto:post@thecottontails.net") post@thecottontails.net
-          .or — eller —
-          a.list(href="http://eepurl.com/OF8XT") Meld deg på vårt nyhetsbrev
+          .or — #{or} —
+          a.list(href="http://eepurl.com/OF8XT")= newsletter
         .social-bits
           a.bit(href="http://www.facebook.com/cottontailsdanseklubb")
             .fa.fa-facebook-square

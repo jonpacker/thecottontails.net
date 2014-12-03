@@ -10,46 +10,42 @@ block content
       a.box(href="/kurs")
         .image(style="background-image: url(/img/kurs.jpg)")
         .inner-box
-          h1 Kurs
+          h1= portal.courses
       a.box(href="/lokaler")
         .image(style="background-image: url(/img/lokaler.jpg)")
         .inner-box
-          h1 Lokaler
+          h1= portal.location
       a.box(href="/hvaskjer")
         .image(style="background-image: url(/img/hvaskjer.jpg)")
         .inner-box
-          h1 Hva skjer?
+          h1= portal.whats_happening
       a.box(href="/om")
         .image(style="background-image: url(/img/manning.jpg)")
         .inner-box
-          h1 Dansene
+          h1= portal.about
       a.box(href="/musikk")
         .image(style="background-image: url(/img/musikk.jpg)")
         .inner-box
-          h1 Musikk
+          h1= portal.music
     #about
       .about-box
-        .blurb Cottontails er en danseklubb i Bergen som driver med amerikanske jazzdanser fra første halvdel av 1900-tallet, som <strong>Lindy Hop, Balboa og Charleston.</strong>
+        .blurb!= club_overview_text.fields.text
     #feed
       .content
-        h1 Vår nyhetsstrøm
+        h1= news_stream
         .stories
           each story in stories
             .news
               a.story(href=story.link) #{story.story} 
                 if story.link
                   .fa.fa-external-link-square
-              .date #{story.date.toString()}
+              .date #{story.date[locale]}
       .content.wider
         .halfbox
-          h2 Ukentlig timeplan
-          .day
-            h3 Tirsdag
-            mixin tuesday
-          .day
-            h3 Torsdag
-            mixin thursday
+          h2= weekly_schedule
+          each day in schedule.fields.days
+            mixin day(day)
         .halfbox.map
-          h2 Asylbarnehagen
+          h2 #{asylbarnehagen.fields.title}
           .map
-          .explanation Explanation of where the gate and entrance is at Asylbarnehagen
+          .explanation !{asylbarnehagen.fields.directions}

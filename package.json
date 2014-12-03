@@ -9,10 +9,13 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "contentful": "^0.1.2",
     "express": "^4.10.2",
     "fb": "^0.7.0",
     "feedparser": "^0.19.2",
     "jade": "^1.7.0",
+    "locale": "0.0.20",
+    "marked": "^0.3.2",
     "moment": "^2.8.4",
     "nib": "^1.0.4",
     "request": "^2.48.0",

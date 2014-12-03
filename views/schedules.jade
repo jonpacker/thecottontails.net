@@ -25,3 +25,14 @@ mixin thursday
     .location 
       .fa.fa-home
       |  Asylbarnehagen
+
+mixin day(day)
+  .day
+    h3!= day.fields.day
+    each event in day.fields.events   
+      .set
+        .time= event.fields.time
+        .desc!= event.fields.title
+        .location
+          .fa.fa-home
+          |  #{event.fields.location}
