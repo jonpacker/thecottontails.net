@@ -146,7 +146,12 @@ app.get('/kurs', function(req, res) {
 
 app.get('/lokaler', function(req, res) {
   res.locals.current = 'locations';
-  res.render('lokaler');
+  data([
+    'asylbarnehagen'
+  ], req.locale, function(e, locals) {
+    if (e) return res.send(500, e);
+    res.render('lokaler', locals);
+  });
 });
 
 app.get('/hvaskjer', function(req, res) {

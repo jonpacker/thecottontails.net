@@ -6,15 +6,10 @@ block content
       .not-bg
         h1 
           .fa.fa-home
-          |  Asylbarnehagen
-        p Vi holder alle kurs og fest på Asylbarnehagen (Asylplassen 2), med mindre
-          | vi gir andre instruksjoner. 
+          |  #{asylbarnehagen.fields.title}
+        | !{asylbarnehagen.fields.desc}
       #entry
         .map
           img(src="/img/map.jpg")
-        .entrydesc We hold our courses in the hall on the 2nd floor, behind the
-          | playground. To get in, continue up Heggebakken past Asylplassen, until
-          | you see the gateway to the kindergarden playground. Enter the gateway,
-          | and proceed up the stairs behind the playground.
-
+        .entrydesc!= asylbarnehagen.fields.directions
 

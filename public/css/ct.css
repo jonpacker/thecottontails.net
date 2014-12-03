@@ -51,7 +51,7 @@ body {
   margin-bottom: 60px;
   border-bottom: 2px solid #fffad5;
 }
-#lokaler #hero p {
+#lokaler #hero .not-bg p {
   font-family: "Brandon Grotesque";
   font-size: 26px;
   line-height: 42px;
@@ -89,6 +89,10 @@ body {
   padding: 40px 0px;
   border-top: 2px solid #fffad5;
   border-bottom: 2px solid #fffad5;
+}
+#lokaler #hero #entry .entrydesc p {
+  margin: 0px;
+  padding: 0px;
 }
 #events {
   width: 100%;
