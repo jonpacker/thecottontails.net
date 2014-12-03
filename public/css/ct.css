@@ -5,6 +5,7 @@ html {
 }
 body {
   min-width: 320px;
+  background-color: #211f1c;
 }
 #index #hero {
   width: 100%;
