@@ -14,6 +14,9 @@
       "music": "Music",
       "about": "The Dances"
     },
+    "events": {
+      "none": "Hmm. Seems like there's no new events to share."
+    },
     "news_stream": "Our newsfeed",
     "weekly_schedule": "Schedule",
     "contact_us": "Get in touch",
@@ -34,6 +37,9 @@
       "whats_happening": "Hva skjer?",
       "music": "Musikk",
       "about": "Dansene"
+    },
+    "events": {
+      "none": "Hm. Ser ut som det er ingen oppkommende arrangementer."
     },
     "news_stream": "Vår nyhetsstrøm",
     "weekly_schedule": "Timeplan",

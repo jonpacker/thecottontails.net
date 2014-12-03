@@ -107,6 +107,10 @@ body {
   font-size: 54px;
   margin-bottom: 50px;
 }
+#events p.empty {
+  font-family: "Brandon Grotesque";
+  font-size: 24px;
+}
 #events .event {
   width: 50%;
   margin-bottom: 40px;
