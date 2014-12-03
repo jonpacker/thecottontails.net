@@ -1,13 +1,13 @@
 extends layout
 block content
   #playlists
-    h1= music.playlists
-    p= music.playlists_desc
+    h1= music.playlists.title
+    p= music.playlists.desc
     .playlists
       each playlist in playlists
         - if (playlist.tracks.total == 0) continue;
         a.playlist(href=playlist.external_urls.spotify, target="blank")
           h2= playlist.name
-          p #{playlist.tracks.total} songs, made by <strong>#{playlist.owner.display_name || playlist.owner.id}</strong>
+          p #{playlist.tracks.total} #{music.playlists.songs}, #{music.playlists.made_by} <strong>#{playlist.owner.display_name || playlist.owner.id}</strong>
           .fa.fa-spotify
   

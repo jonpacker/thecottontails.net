@@ -19,7 +19,13 @@
     },
     "music": {
       "playlists": "Playlists",
-      "playlists_desc": "We mostly manage our playlists by spotify, and encourage our DJs to share them, so that you can find the music you dance to and really get to know it in your own time."
+      "playlists_desc": "We mostly manage our playlists by spotify, and encourage our DJs to share them, so that you can find the music you dance to and really get to know it in your own time.",
+      "songs": "songs",
+      "made_by": "made by"
+    },
+    "about": {
+      "title": "About The Cottontails",
+      "the_dances": "The Dances"
     },
     "news_stream": "Our newsfeed",
     "weekly_schedule": "Schedule",
@@ -46,8 +52,16 @@
       "none": "Hm. Ser ut som det er ingen oppkommende arrangementer."
     },
     "music": {
-      "playlists": "Spillelister",
-      "playlists_desc": "We mostly manage our playlists by spotify, and encourage our DJs to share them, so that you can find the music you dance to and really get to know it in your own time."
+      "playlists": {
+        "title": "Spillelister",
+        "desc": "We mostly manage our playlists by spotify, and encourage our DJs to share them, so that you can find the music you dance to and really get to know it in your own time.",
+        "songs": "sanger",
+        "made_by": "av"
+      }
+    },
+    "about": {
+      "title": "Om Cottontails",
+      "the_dances": "Dansene"
     },
     "news_stream": "Vår nyhetsstrøm",
     "weekly_schedule": "Timeplan",

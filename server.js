@@ -161,7 +161,16 @@ app.get('/hvaskjer', function(req, res) {
 
 app.get('/om', function(req, res) {
   res.locals.current = 'about';
-  res.render('about');
+  data([
+    'about_cottontails',
+    'about_lindy_hop',
+    'about_balboa',
+    'about_authentic_jazz',
+    'about_collegiate_shag'
+  ], req.locale, function(e, locals) {
+    if (e) return res.send(500, e);
+    res.render('about', locals);
+  });
 });
 
 app.get('/musikk', function(req, res) {

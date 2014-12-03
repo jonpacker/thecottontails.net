@@ -10,31 +10,30 @@ mixin dance(title, video, autoplay)
       .fa-stack.unmute-button
         .fa.fa-circle.fa-stack-2x
         .fa.fa-volume-up.fa-stack-1x.fa-inverse.mute-icon
-      h1.while-playing= title
+      h1.while-playing!= title
       .caption
-        h1= title
+        h1!= title
         block
 block content
   #about
     #cottontails
-      h1 Om Cottontails
+      h1= about.title
       img(src="/img/ct_new_nothe.svg").logo
-      p The Cottontails er en danseklubb i Bergen som driver med amerikanske jazzdanser fra første halvdel av 1900-tallet, som Lindy Hop, Balboa og Charleston.
-      p Vårt hovedfokus er på sosialdans, og rett og slett å ha det gøy når man danser!
+      | !{about_cottontails.fields.text}
     #heading.dance-head
-      h1.really-big Dansene
+      h1.really-big= about.the_dances
 
-    +dance('Lindy Hop', 'michael_frida_web', true)#lindyhop
-      p Denne partnerdansen oppsto på danseklubbene i 20-og 30-tallets Harlem, New York, og regnes som den originale swing-dansen. Den er energisk og kreativ, og til tider høytflyvende. Vi danser til swingende jazz, fra Ella og Billie, the Duke, the Count og Prez. Kanskje tilogmed yngre kids som Flip Phillips og Gerry Mulligan.
+    +dance(about_lindy_hop.fields.name, 'michael_frida_web', true)#lindyhop
+      | !{about_lindy_hop.fields.desc}
 
-    +dance('Autentisk Jazz', 'rock_it_for_me_web')#authenticjazz
-      p Autentisk jazz er en partnerløs dans fra swing-alderen. Vi danser solo eller i grupper, improvisert eller koreografert. Vi snakker om jazz-trinn som Susie Q, Fall Off the Log, Spank the Baby og Charleston. Dette energetisk, eksentrisk og ekstatisk. Let’s boogie like it's 1933!
+    +dance(about_authentic_jazz.fields.name, 'rock_it_for_me_web')#authenticjazz
+      | !{about_authentic_jazz.fields.desc}
 
-    +dance('Balboa', 'mickey_kelly_web')#balboa
-      p Balboa er fra samme periode som Lindy Hop og dansens til samme musikk . Denne dansen oppsto i syd-California, da dansegulvet ble så fullt at det ikke var plass til å swinge partneren av gårde. Her danser man i tett lukket posisjon, men stor vekt på føring og følging, og på fotarbeid. Og du kan danse hele natten til rask musikk uten å bli sliten! Glatte glatte sko anbefales, gjerne med litt hel for damene.
+    +dance(about_balboa.fields.name, 'mickey_kelly_web')#balboa
+      | !{about_balboa.fields.desc}
 
-    +dance('Collegiate Shag', 'stephen_chandrae_web')#shag
-      p Collegiate Shag er en dans som jeg har ingen tekst om. Nå skal jeg gå og plage Magnus sånn at han kan skrive noe om det. Biodiesel wayfarers tousled fap pug cronut viral raw denim. Fixie retro flannel, butcher iPhone whatever four loko. Mixtape direct trade blog, Tonx banh mi plaid McSweeney's chillwave readymade Shoreditch cray. 
+    +dance(about_collegiate_shag.fields.name, 'stephen_chandrae_web')#shag
+      | !{about_collegiate_shag.fields.desc}
 
 block scripts
   script(type='text/javascript', src='/js/waypoints.min.js')
