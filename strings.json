@@ -17,6 +17,10 @@
     "events": {
       "none": "Hmm. Seems like there's no new events to share."
     },
+    "music": {
+      "playlists": "Playlists",
+      "playlists_desc": "We mostly manage our playlists by spotify, and encourage our DJs to share them, so that you can find the music you dance to and really get to know it in your own time."
+    },
     "news_stream": "Our newsfeed",
     "weekly_schedule": "Schedule",
     "contact_us": "Get in touch",
@@ -40,6 +44,10 @@
     },
     "events": {
       "none": "Hm. Ser ut som det er ingen oppkommende arrangementer."
+    },
+    "music": {
+      "playlists": "Spillelister",
+      "playlists_desc": "We mostly manage our playlists by spotify, and encourage our DJs to share them, so that you can find the music you dance to and really get to know it in your own time."
     },
     "news_stream": "Vår nyhetsstrøm",
     "weekly_schedule": "Timeplan",

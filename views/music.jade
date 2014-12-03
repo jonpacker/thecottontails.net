@@ -1,8 +1,8 @@
 extends layout
 block content
   #playlists
-    h1 Playlists
-    p We mostly manage our playlists by spotify, and encourage our DJs to share them, so that you can find the music you dance to and really get to know it in your own time.
+    h1= music.playlists
+    p= music.playlists_desc
     .playlists
       each playlist in playlists
         - if (playlist.tracks.total == 0) continue;
