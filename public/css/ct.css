@@ -46,14 +46,16 @@ body {
 }
 #lokaler #hero h1 {
   font-size: 54px;
-  font-family: "Playfair Display";
-  font-style: italic;
+  font-family: "lust-script", "Lust Script";
+  font-style: normal;
+  font-weight: normal;
+  text-rendering: optimizeLegibility;
   padding-bottom: 20px;
   margin-bottom: 60px;
   border-bottom: 2px solid #fffad5;
 }
 #lokaler #hero .not-bg p {
-  font-family: "Brandon Grotesque";
+  font-family: "brandon-grotesque", "Brandon Grotesque";
   font-size: 26px;
   line-height: 42px;
   padding: 0px 10%;
@@ -82,7 +84,7 @@ body {
 }
 #lokaler #hero #entry .entrydesc {
   width: 40%;
-  font-family: "Brandon Grotesque";
+  font-family: "brandon-grotesque", "Brandon Grotesque";
   font-size: 22px;
   line-height: 32px;
   color: #fffad5;
@@ -103,13 +105,15 @@ body {
   position: relative;
 }
 #events h1 {
-  font-family: "Playfair Display";
-  font-style: italic;
+  font-family: "lust-script", "Lust Script";
+  font-style: normal;
+  font-weight: normal;
+  text-rendering: optimizeLegibility;
   font-size: 54px;
   margin-bottom: 50px;
 }
 #events p.empty {
-  font-family: "Brandon Grotesque";
+  font-family: "brandon-grotesque", "Brandon Grotesque";
   font-size: 24px;
 }
 #events .event {
@@ -135,8 +139,8 @@ body {
 #events .event h2 {
   margin-top: 0px;
   font-family: "Playfair Display";
-  font-weight: normal;
   font-style: italic;
+  font-weight: normal;
   font-size: 42px;
 }
 #events .event .fa-external-link {
@@ -150,7 +154,7 @@ body {
   font-size: 45px;
 }
 #events .event .meta {
-  font-family: "Brandon Grotesque";
+  font-family: "brandon-grotesque", "Brandon Grotesque";
   font-size: 24px;
   line-height: 32px;
   color: #105b63;
@@ -174,12 +178,14 @@ body {
   clear: both;
 }
 #about h1 {
-  font-family: "Playfair Display";
+  font-family: "lust-script", "Lust Script";
+  font-style: normal;
+  font-weight: normal;
+  text-rendering: optimizeLegibility;
   font-size: 54px;
-  font-style: italic;
 }
 #about p {
-  font-family: "Brandon Grotesque";
+  font-family: "brandon-grotesque", "Brandon Grotesque";
   font-size: 24px;
   line-height: 32px;
   padding: 0px 5%;
@@ -337,6 +343,9 @@ body {
 #about .dance h1.while-playing p {
   padding: 0px;
   margin: 0px;
+  font-family: inherit;
+  font-style: inherit;
+  font-weight: inherit;
 }
 #about .dance.muted .videobg {
   opacity: 0.1;
@@ -379,7 +388,7 @@ body {
   height: 80px;
   background-color: #fffad5;
   color: #211f1c;
-  font-family: "Brandon Grotesque";
+  font-family: "brandon-grotesque", "Brandon Grotesque";
   font-size: 22px;
 }
 #nav a {
@@ -485,7 +494,7 @@ body {
   color: #ffd34e;
   text-align: center;
   font-size: 22px;
-  font-family: "Brandon Grotesque";
+  font-family: "brandon-grotesque", "Brandon Grotesque";
   font-weight: normal;
   margin-top: 50px;
   clear: none;
@@ -576,12 +585,14 @@ body {
 }
 #kurs #about h1 {
   font-size: 54px;
-  font-family: "Playfair Display";
-  font-style: italic;
+  font-family: "lust-script", "Lust Script";
+  font-style: normal;
+  font-weight: normal;
+  text-rendering: optimizeLegibility;
 }
 #kurs #about p {
   padding: 0px 5%;
-  font-family: "Brandon Grotesque";
+  font-family: "brandon-grotesque", "Brandon Grotesque";
   font-size: 28px;
   line-height: 36px;
 }
@@ -591,7 +602,7 @@ body {
   margin: 20px 0px;
   font-size: 36px;
   border: 5px solid #bd4932;
-  font-family: "Brandon Grotesque";
+  font-family: "brandon-grotesque", "Brandon Grotesque";
   font-weight: bold;
 }
 #kurs #about .registration:hover {
@@ -604,7 +615,7 @@ body {
   background-color: #fffad5;
   color: #211f1c;
   zoom: 1;
-  font-family: "Brandon Grotesque";
+  font-family: "brandon-grotesque", "Brandon Grotesque";
   font-size: 22px;
 }
 #kurs #levels:before,
@@ -617,7 +628,7 @@ body {
 }
 #kurs #levels .main-overview {
   padding: 0px 5%;
-  font-family: "Brandon Grotesque";
+  font-family: "brandon-grotesque", "Brandon Grotesque";
   font-size: 28px;
   line-height: 36px;
 }
@@ -710,8 +721,10 @@ body {
   zoom: 1;
 }
 .content h1 {
-  font-family: "Playfair Display";
-  font-style: italic;
+  font-family: "lust-script", "Lust Script";
+  font-style: normal;
+  font-weight: normal;
+  text-rendering: optimizeLegibility;
   font-size: 54px;
 }
 .content:before,
@@ -760,8 +773,8 @@ body {
 }
 #feed .content .news .story {
   font-family: "Playfair Display";
-  font-size: 22px;
   font-style: italic;
+  font-size: 22px;
   color: inherit;
   text-decoration: none;
 }
@@ -775,7 +788,7 @@ body {
   color: inherit;
 }
 #feed .content .news .date {
-  font-family: "Brandon Grotesque";
+  font-family: "brandon-grotesque", "Brandon Grotesque";
   font-size: 16px;
   color: #ffd34e;
   position: relative;
@@ -801,13 +814,15 @@ body {
 }
 #playlists h1 {
   font-size: 54px;
-  font-family: "Playfair Display";
-  font-style: italic;
+  font-family: "lust-script", "Lust Script";
+  font-style: normal;
+  font-weight: normal;
+  text-rendering: optimizeLegibility;
 }
 #playlists p {
   font-size: 24px;
   line-height: 32px;
-  font-family: "Brandon Grotesque";
+  font-family: "brandon-grotesque", "Brandon Grotesque";
 }
 #playlists .playlists {
   margin-top: 80px;
@@ -858,7 +873,7 @@ body {
   color: #fffad5;
 }
 #timeplan h2 {
-  font-family: "Brandon Grotesque";
+  font-family: "brandon-grotesque", "Brandon Grotesque";
   font-weight: bold;
   font-style: normal;
 }
@@ -918,10 +933,8 @@ body {
 }
 .halfbox h2,
 .halfbox h3 {
-  font-family: "Playfair Display";
   margin-top: 0px;
   font-weight: 200;
-  font-style: italic;
 }
 .halfbox h2 p,
 .halfbox h3 p {
@@ -929,9 +942,15 @@ body {
   padding: 0px;
 }
 .halfbox h2 {
+  font-family: "lust-script", "Lust Script";
+  font-style: normal;
+  font-weight: normal;
+  text-rendering: optimizeLegibility;
   font-size: 42px;
 }
 .halfbox h3 {
+  font-family: "Playfair Display";
+  font-style: italic;
   font-size: 26px;
   margin-bottom: 6px;
   margin-top: 20px;
@@ -951,14 +970,14 @@ body {
 }
 .halfbox .explanation {
   color: #ffd34e;
-  font-family: "Brandon Grotesque";
+  font-family: "brandon-grotesque", "Brandon Grotesque";
 }
 .halfbox .explanation p {
   padding: 0px;
   margin: 0px;
 }
 .halfbox .set {
-  font-family: "Brandon Grotesque";
+  font-family: "brandon-grotesque", "Brandon Grotesque";
   font-size: 18px;
 }
 .halfbox .set p {
@@ -1020,9 +1039,11 @@ body {
   filter: alpha(opacity=10);
 }
 #contact h1 {
-  font-family: "Playfair Display";
+  font-family: "lust-script", "Lust Script";
+  font-style: normal;
+  font-weight: normal;
+  text-rendering: optimizeLegibility;
   font-size: 54px;
-  font-style: italic;
   display: none;
 }
 #contact .contact-bits {
@@ -1049,9 +1070,10 @@ body {
 }
 #contact .or {
   font-size: 24px;
-  font-family: "Playfair Display";
-  font-style: italic;
-  font-weight: bold;
+  font-family: "lust-script", "Lust Script";
+  font-style: normal;
+  font-weight: normal;
+  text-rendering: optimizeLegibility;
   -webkit-transform: skew(12deg, -7deg);
   -moz-transform: skew(12deg, -7deg);
   -o-transform: skew(12deg, -7deg);
@@ -1065,7 +1087,7 @@ body {
   padding: 15px 40px;
   border: 5px solid #ffd34e;
   text-decoration: none;
-  font-family: "Brandon Grotesque";
+  font-family: "brandon-grotesque", "Brandon Grotesque";
   font-size: 32px;
   margin: 40px 0px;
 }
