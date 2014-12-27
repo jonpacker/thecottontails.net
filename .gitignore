@@ -1,4 +1,5 @@
 node_modules
 public/vid
 .DS_Store
+event_*
 

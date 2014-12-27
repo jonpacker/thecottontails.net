@@ -1,0 +1,25 @@
+extends layout
+block content
+  #registration
+    h1 #{registration.title}, !{levels.fields.title}
+    form.registration(method="POST", action="/registration/spring15")
+      .field
+        label(for="first_name")= registration.first_name
+        input.text(name="first_name")
+      .field
+        label(for="last_name")= registration.last_name
+        input.text(name="last_name")
+      .field
+        label(for="last_name")= registration.email
+        input.text(name="email", type="email")
+
+      h2= registration.level
+      .field-content
+        each level, i in levels.fields.levels
+          input.level(type="radio", id=level.fields.internal_name, name="level", checked=i==0, value=level.fields.internal_name)
+          label.level-desc(for=level.fields.internal_name)
+            h3!= level.fields.name
+            | !{level.fields.desc}
+      input.submit(type="submit", value=registration.register)
+    
+

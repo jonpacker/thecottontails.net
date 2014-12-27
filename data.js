@@ -27,7 +27,7 @@ function processEntry(entry, locale) {
 module.exports = function getData(fields, locale, callback) {
   var fieldIds = fields.map(function(field) { return cLink[field] });
   var collected = {};
-  if (Date.now() - lastUpdate > 10000) entries = contentful.entries();
+  if (Date.now() - lastUpdate > 60000) entries = contentful.entries();
   entries.then(function(entries) {
     entries.forEach(function(entry) {
       if (!~fieldIds.indexOf(entry.sys.id)) return;

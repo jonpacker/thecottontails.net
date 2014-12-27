@@ -636,6 +636,115 @@ body {
   background-color: #ffd34e;
   color: #211f1c;
 }
+#kurs #levels .halfbox h2 {
+  font-family: "Playfair Display";
+  font-style: italic;
+}
+#kurs #levels .halfbox h2 p {
+  margin: 0px;
+  padding: 0px;
+}
+#registration {
+  background-color: #fffad5;
+  padding: 80px 20%;
+  color: #211f1c;
+}
+#registration input.text {
+  font-size: 26px;
+  font-family: "brandon-grotesque", "Brandon Grotesque";
+  padding: 14px 30px 10px;
+  border: 4px solid #211f1c;
+  display: inline-block;
+  background-color: rgba(33,31,28,0.05);
+  width: 60%;
+  margin-bottom: 20px;
+  border-top: none;
+  vertical-align: top;
+  font-weight: bold;
+}
+#registration input.text:focus {
+  border-color: #105b63;
+  outline: none;
+}
+#registration .field-content {
+  background-color: rgba(33,31,28,0.05);
+}
+#registration .field label {
+  font-family: "brandon-grotesque", "Brandon Grotesque";
+  width: 15%;
+  text-align: left;
+  display: inline-block;
+  vertical-align: top;
+  padding: 14px 34px 10px;
+  font-size: 26px;
+  border-bottom: 4px dotted #211f1c;
+}
+#registration input.level {
+  display: none;
+}
+#registration label.level-desc {
+  display: inline-block;
+  vertical-align: top;
+  padding: 10px 30px;
+  width: 45%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 20px 2.5%;
+  border: 4px solid #211f1c;
+  font-family: "brandon-grotesque", "Brandon Grotesque";
+  font-size: 14px;
+  cursor: pointer;
+}
+#registration label.level-desc:hover {
+  outline: 6px solid #ffd34e;
+}
+#registration label.level-desc h3 {
+  font-family: "Playfair Display";
+  font-style: italic;
+  font-size: 22px;
+}
+#registration label.level-desc p,
+#registration label.level-desc h3 {
+  pointer-events: none;
+}
+#registration input.level:checked + label {
+  background-color: #ffd34e;
+  outline: 6px solid #ffd34e;
+}
+#registration input.submit {
+  border: 4px solid #211f1c;
+  padding: 10px 30px;
+  font-family: "brandon-grotesque", "Brandon Grotesque";
+  background-color: transparent;
+  font-size: 32px;
+  cursor: pointer;
+  margin-top: 40px;
+  outline: 6px solid #105b63;
+}
+#registration input.submit:hover {
+  outline: 6px solid #db9e36;
+}
+#registration h2 {
+  font-family: "brandon-grotesque", "Brandon Grotesque";
+  font-weight: normal;
+  border-bottom: 4px dotted #211f1c;
+  padding: 10px 30px;
+  font-size: 26px;
+  width: 30%;
+}
+#registration h1 {
+  font-family: "lust-script", "Lust Script";
+  font-style: normal;
+  font-weight: normal;
+  text-rendering: optimizeLegibility;
+  font-size: 54px;
+}
+#registration h1 p {
+  margin: 0;
+  padding: 0;
+  display: inline;
+}
 #index #about {
   width: 100%;
   display: block;

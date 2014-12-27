@@ -27,6 +27,19 @@
       "title": "About The Cottontails",
       "the_dances": "The Dances"
     },
+    "registration": {
+      "title": "Registration",
+      "first_name": "First Name",
+      "last_name": "Surname",
+      "email": "Email",
+      "level": "Level",
+      "register": "Sign me up!"
+    },
+    "courses": {
+      "title": "Course Overview",
+      "register": "Sign me up for spring 2015!",
+      "levels": "Levels"
+    },
     "news_stream": "Our newsfeed",
     "weekly_schedule": "Schedule",
     "contact_us": "Get in touch",
@@ -62,6 +75,19 @@
     "about": {
       "title": "Om Cottontails",
       "the_dances": "Dansene"
+    },
+    "registration": {
+      "title": "Påmelding",
+      "first_name": "Fornavn",
+      "last_name": "Etternavn",
+      "email": "E-post",
+      "level": "Nivå",
+      "register": "Meld meg på!"
+    },
+    "courses": {
+      "title": "Om Kursene",
+      "register": "Meld meg på til vår 2015!",
+      "levels": "Nivåer"
     },
     "news_stream": "Vår nyhetsstrøm",
     "weekly_schedule": "Timeplan",

@@ -534,6 +534,104 @@ body
     background-color cs_col3
     color cs_col6
 
+    h2
+      cs_font_serif()
+      p
+        margin 0px
+        padding 0px
+
+#registration
+  background-color cs_col2
+  padding 80px 20%
+  color cs_col6
+
+  input.text
+    font-size 26px
+    cs_font_body()
+    padding 14px 30px 10px
+    border 4px solid cs_col6
+    display inline-block
+    background-color rgba(cs_col6, 5%)
+    width 60%
+    margin-bottom 20px
+    border-top none
+    vertical-align top
+    font-weight bold
+    &:focus
+      border-color cs_col5
+      outline none
+
+  .field-content
+    background-color rgba(cs_col6, 5%)
+
+  .field label
+    cs_font_body()
+    width 15%
+    text-align left
+    display inline-block
+    vertical-align top
+    padding 14px 34px 10px
+    font-size 26px
+    border-bottom 4px dotted cs_col6
+
+  input.level
+    display none
+
+  label.level-desc
+    display inline-block
+    vertical-align top
+    padding 10px 30px
+    width 45%
+    box-sizing border-box
+    margin 20px 2.5%
+    border 4px solid cs_col6
+    cs_font_body()
+    font-size 14px
+    cursor pointer
+
+    &:hover
+      outline 6px solid cs_col3
+
+    h3
+      cs_font_serif()
+      font-size 22px
+
+    p, h3
+      pointer-events none
+
+  input.level:checked + label
+    background-color cs_col3
+    outline 6px solid cs_col3
+
+  input.submit
+    border 4px solid cs_col6
+    padding 10px 30px
+    cs_font_body()
+    background-color transparent
+    font-size 32px
+    cursor pointer
+    margin-top 40px
+    outline 6px solid cs_col5
+    &:hover
+      outline 6px solid cs_col4
+
+  h2
+    cs_font_body()
+    font-weight normal
+    border-bottom 4px dotted cs_col6
+    padding 10px 30px
+    font-size 26px
+    width 30%
+
+  h1
+    cs_font_huge()
+    font-size 54px
+    p
+      margin 0
+      padding 0
+      display inline
+
+
 #index #about
   width 100%
   display block

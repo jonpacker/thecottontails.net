@@ -9,6 +9,7 @@ var SpotifyWebApi = require('spotify-web-api-node');
 var data = require('./data');
 var locale = require('locale');
 var strings = require('./strings.json');
+var fs = require('fs');
 
 var spotify = new SpotifyWebApi({
   clientId: '28f48569ef90450fb4b263a93e7ae19e',
@@ -141,8 +142,52 @@ app.get('/', function(req, res) {
 
 app.get('/kurs', function(req, res) {
   res.locals.current = 'courses';
-  res.render('kurs');
+  data([
+    'level_overview',
+    'course_overview',
+    'levels',
+    'schedule'
+  ], req.locale, function(e, locals) {
+    if (e) return res.send(500, e);
+    res.render('kurs', locals);
+  });
 });
+
+app.get('/registration', function(req, res) {
+  res.locals.current = 'courses';
+  data([
+    'levels'
+  ], req.locale, function(e, locals) {
+    if (e) return res.send(500, e);
+    res.render('registration', locals);
+  });
+});
+
+app.post('/registration/:event', require('body-parser').urlencoded({extended:false}), function(req, res) {
+  var eventFile = 'event_' + req.params.event + '.json';
+  fs.readFile(eventFile, {encoding: 'utf8'}, function(err, contents) {
+    var registrations;
+    if (err) {
+      if (err.code == 'ENOENT') {
+        registrations = [];
+      } else {
+        return res.send(500);
+      }
+    }
+
+    if (!registrations) registrations = JSON.parse(contents);
+
+    registrations.push(req.body);
+    console.log(req.body);
+
+    fs.writeFile(eventFile, JSON.stringify(registrations), { encoding: 'utf8' }, function(err) {
+      if (err) res.send(500, 'registration failed');
+      res.send('OK DA');
+    });
+    
+  });
+});
+
 
 app.get('/lokaler', function(req, res) {
   res.locals.current = 'locations';
