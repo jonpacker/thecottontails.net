@@ -1,3 +1,4 @@
+include flags
 doctype
 html
   head
@@ -20,6 +21,7 @@ html
         a.item(href="/hvaskjer", class=current == 'events' ? 'active' : '')= nav.whats_happening
         a.item(href="/musikk", class=current == 'music' ? 'active' : '')= nav.music
         a.item(href="/om", class=current == 'about' ? 'active' : '')= nav.about
+        mixin flags
     block content
     #contact
       .bg

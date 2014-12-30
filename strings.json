@@ -18,10 +18,12 @@
       "none": "Hmm. Seems like there's no new events to share."
     },
     "music": {
-      "playlists": "Playlists",
-      "playlists_desc": "We mostly manage our playlists by spotify, and encourage our DJs to share them, so that you can find the music you dance to and really get to know it in your own time.",
-      "songs": "songs",
-      "made_by": "made by"
+      "playlists": {
+        "title": "Playlists",
+        "desc": "We mostly manage our playlists by spotify, and encourage our DJs to share them, so that you can find the music you dance to and really get to know it in your own time.",
+        "songs": "songs",
+        "made_by": "by"
+      }
     },
     "about": {
       "title": "About The Cottontails",
@@ -33,18 +35,24 @@
       "last_name": "Surname",
       "email": "Email",
       "level": "Level",
-      "register": "Sign me up!"
+      "register": "Sign me up!",
+      "thanks": "Thanks",
+      "role": "Role",
+      "leader": "Leader",
+      "follower": "Follower"
     },
     "courses": {
+      "schedule": "Schedule",
       "title": "Course Overview",
-      "register": "Sign me up for spring 2015!",
+      "register": "Sign me up for",
       "levels": "Levels"
     },
     "news_stream": "Our newsfeed",
     "weekly_schedule": "Schedule",
     "contact_us": "Get in touch",
     "newsletter": "Sign up for our newsletter",
-    "or": "or"
+    "or": "or",
+    "whats_happening": "What's happening?"
   },
   "nb": {
     "nav": {
@@ -82,18 +90,24 @@
       "last_name": "Etternavn",
       "email": "E-post",
       "level": "Nivå",
-      "register": "Meld meg på!"
+      "register": "Meld meg på!",
+      "thanks": "Takk",
+      "role": "Rolle",
+      "leader": "Fører",
+      "follower": "Følger"
     },
     "courses": {
+      "schedule": "Timeplan",
       "title": "Om Kursene",
-      "register": "Meld meg på til vår 2015!",
+      "register": "Meld meg på til",
       "levels": "Nivåer"
     },
     "news_stream": "Vår nyhetsstrøm",
     "weekly_schedule": "Timeplan",
     "contact_us": "Kontakt oss",
     "newsletter": "Meld deg på vårt nyhetsbrev",
-    "or": "eller"
+    "or": "eller",
+    "whats_happening": "Hva skjer?"
   }
 
 }

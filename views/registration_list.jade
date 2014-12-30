@@ -1,0 +1,28 @@
+extends layout
+
+mixin reg_list(regs)
+  - regs = _.sortBy(regs, function(reg) { return reg.first_name + ' ' + reg.last_name });
+  ul
+    each reg in regs
+      li #{reg.first_name} #{reg.last_name} - #{reg.email}
+
+block content
+  #reg_list
+    if !registrations.length
+      strong No records
+    else
+      - var levels = _.groupBy(registrations, function(reg) { return reg.level });
+      each regs, level in levels
+        - var leads = _.filter(regs, function(reg) { return reg.role == 'leader' })
+        - var follows = _.filter(regs, function(reg) { return reg.role == 'follower' })
+        h1= level
+        h3 Leads
+        mixin reg_list(leads)
+        h3 Follows
+        mixin reg_list(follows)
+        h3 Email List
+        p= _.pluck(regs, 'email').join(', ')
+
+    hr
+    h3 Raw data
+    textarea(style="font-family:monospace")= JSON.stringify(registrations, true, ' ')

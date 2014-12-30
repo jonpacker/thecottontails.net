@@ -12,6 +12,12 @@ block content
       .field
         label(for="last_name")= registration.email
         input.text(name="email", type="email")
+      .field
+        label= registration.role
+        input.role(type="radio", id="leader", name="role", checked, value="leader")
+        label.role(for="leader")= registration.leader
+        input.role.last(type="radio", id="follower", name="role", value="follower")
+        label.role.last(for="follower")= registration.follower
 
       h2= registration.level
       .field-content

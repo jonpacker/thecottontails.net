@@ -1,7 +1,7 @@
 extends layout
 block content
   #events
-    h1 Hva skjer?
+    h1= whats_happening
     if events.length == 0
       each event in events
         a.event(href=event.link, target="blank")

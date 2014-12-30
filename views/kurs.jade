@@ -4,14 +4,14 @@ block content
   #kurs
     #timeplan
       .content
-        h1 Timeplan Vinter/Vår 2014
+        h1 #{courses.schedule}, !{levels.fields.title}
         each day in schedule.fields.days
           .halfbox
             mixin day(day)
     #about
       h1= courses.title
       | !{course_overview.fields.text}
-      .registration= courses.register
+      .registration #{courses.register} !{levels.fields.title}!
     #levels
       .content
         h1= courses.levels
