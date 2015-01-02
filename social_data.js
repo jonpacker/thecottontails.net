@@ -71,12 +71,14 @@ module.exports = function(app) {
           }
           return !!post.message
         }).map(function(post) {
+          var created = moment(post.created_time);
           return {
             story: post.message,
             date: {
-              nb: moment(post.created_time).locale('nb').format('Do MMMM'),
-              en: moment(post.created_time).locale('en').format('Do MMMM')
+              nb: created.locale('nb').format('Do MMMM'),
+              en: created.locale('en').format('Do MMMM')
             },
+            created: created,
             link: post.link
           };
         }).slice(0,5);

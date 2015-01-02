@@ -164,50 +164,50 @@ body {
   width: 30px;
   display: inline-block;
 }
-#about > div {
+#kurs #about > div {
   padding: 80px 10%;
   zoom: 1;
   color: #211f1c;
 }
-#about > div:before,
-#about > div:after {
+#kurs #about > div:before,
+#kurs #about > div:after {
   content: "";
   display: table;
 }
-#about > div:after {
+#kurs #about > div:after {
   clear: both;
 }
-#about h1 {
+#kurs #about h1 {
   font-family: "lust-script", "Lust Script";
   font-style: normal;
   font-weight: normal;
   text-rendering: optimizeLegibility;
   font-size: 54px;
 }
-#about p {
+#kurs #about p {
   font-family: "brandon-grotesque", "Brandon Grotesque";
   font-size: 24px;
   line-height: 32px;
   padding: 0px 5%;
 }
-#about #cottontails {
+#kurs #about #cottontails {
   background-color: #fffad5;
   color: #211f1c;
 }
-#about #cottontails h1 {
+#kurs #about #cottontails h1 {
   margin-bottom: 60px;
 }
-#about #cottontails .logo {
+#kurs #about #cottontails .logo {
   float: left;
   margin-top: -20px;
   width: 200px;
   margin-right: 40px;
 }
-#about #heading {
+#kurs #about #heading {
   padding: 80px 0px;
 }
-#about .dance,
-#about .dance-head {
+#kurs #about .dance,
+#kurs #about .dance-head {
   background-color: #211f1c;
   color: #fffad5;
   padding: 0px;
@@ -215,8 +215,8 @@ body {
   width: 100%;
   text-align: center;
 }
-#about .dance h1.really-big,
-#about .dance-head h1.really-big {
+#kurs #about .dance h1.really-big,
+#kurs #about .dance-head h1.really-big {
   font-size: 128px;
   font-weight: normal;
   border-bottom: 2px solid #fffad5;
@@ -224,15 +224,15 @@ body {
   margin: 0 auto;
   padding-bottom: 40px;
 }
-#about .dance:after {
+#kurs #about .dance:after {
   padding-top: 50%;
   content: '';
   display: block;
 }
-#about .dance#lindyhop video {
+#kurs #about .dance#lindyhop video {
   margin-top: 1%;
 }
-#about .dance .videobg {
+#kurs #about .dance .videobg {
   width: 100%;
   z-index: 0;
   position: absolute;
@@ -247,11 +247,11 @@ body {
   -ms-transition: opacity 150ms ease-out;
   transition: opacity 150ms ease-out;
 }
-#about .dance .videobg video {
+#kurs #about .dance .videobg video {
   width: 100%;
   margin-top: -2.25%;
 }
-#about .dance .not-videobg {
+#kurs #about .dance .not-videobg {
   zoom: 1;
   position: absolute;
   z-index: 10;
@@ -262,26 +262,26 @@ body {
   box-sizing: border-box;
   text-align: center;
 }
-#about .dance .not-videobg:before,
-#about .dance .not-videobg:after {
+#kurs #about .dance .not-videobg:before,
+#kurs #about .dance .not-videobg:after {
   content: "";
   display: table;
 }
-#about .dance .not-videobg:after {
+#kurs #about .dance .not-videobg:after {
   clear: both;
 }
-#about .dance .not-videobg .caption {
+#kurs #about .dance .not-videobg .caption {
   display: inline-block;
   height: 60%;
   width: 50%;
   margin-top: 10%;
   position: relative;
 }
-#about .dance .not-videobg .caption h1 {
+#kurs #about .dance .not-videobg .caption h1 {
   margin-top: 0px;
   font-size: 84px;
 }
-#about .dance .not-videobg .caption h1 p {
+#kurs #about .dance .not-videobg .caption h1 p {
   margin: 0px;
   padding: 0px;
   font-size: inherit;
@@ -290,12 +290,12 @@ body {
   font-weight: inherit;
   line-height: inherit;
 }
-#about .dance .not-videobg .caption p {
+#kurs #about .dance .not-videobg .caption p {
   font-size: 24px;
   line-height: 32px;
   padding: 0px;
 }
-#about .dance .not-videobg .unmute-button {
+#kurs #about .dance .not-videobg .unmute-button {
   font-size: 30px;
   position: absolute;
   top: 40px;
@@ -303,10 +303,10 @@ body {
   left: 40px;
   color: #ffd34e;
 }
-#about .dance .not-videobg .unmute-button .fa-inverse {
+#kurs #about .dance .not-videobg .unmute-button .fa-inverse {
   color: #211f1c;
 }
-#about .dance h1.while-playing {
+#kurs #about .dance h1.while-playing {
   font-size: 34px;
   font-family: "Playfair Display";
   font-style: italic;
@@ -326,47 +326,47 @@ body {
   -ms-transition: opacity 150ms ease-out;
   transition: opacity 150ms ease-out;
 }
-#about .dance h1.while-playing p {
+#kurs #about .dance h1.while-playing p {
   padding: 0px;
   margin: 0px;
   font-family: inherit;
   font-style: inherit;
   font-weight: inherit;
 }
-#about .dance.muted .videobg {
+#kurs #about .dance.muted .videobg {
   opacity: 0.1;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=10)";
   filter: alpha(opacity=10);
 }
-#about .dance.muted h1.while-playing {
+#kurs #about .dance.muted h1.while-playing {
   opacity: 0;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
   filter: alpha(opacity=0);
 }
-#about .dance.muted .caption {
+#kurs #about .dance.muted .caption {
   opacity: 1;
   -ms-filter: none;
   filter: none;
 }
-#about .video {
+#kurs #about .video {
   margin-left: 5%;
   float: left;
   width: 44%;
 }
-#about .video video {
+#kurs #about .video video {
   width: 100%;
 }
-#about .video video[muted] {
+#kurs #about .video video[muted] {
   opacity: 0.5;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
   filter: alpha(opacity=50);
 }
-#about .text {
+#kurs #about .text {
   margin-right: 5%;
   float: right;
   width: 44%;
 }
-#about .text p {
+#kurs #about .text p {
   margin-top: 0px;
 }
 #nav {
@@ -466,7 +466,7 @@ body {
   background-size: 140%;
   background-position: 50% 50%;
   background-repeat: no-repeat;
-  padding-bottom: 320px;
+  padding-bottom: 80px;
 }
 #portal:before,
 #portal:after {
@@ -808,56 +808,33 @@ body {
   width: 100%;
   display: block;
   position: relative;
-  height: 0px;
-  overflow: visible;
-}
-#index #about .about-box {
-  color: #211f1c;
+  height: auto;
+  padding: 80px 20%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
   background-image: url("/img/fun.jpg");
   background-position: center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
-  font-family: "Playfair Display";
-  font-style: italic;
+  font-family: "brandon-grotesque", "Brandon Grotesque";
+  color: #211f1c;
   font-size: 32px;
   text-align: center;
-  width: 80%;
-  margin-left: -40%;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  padding: 20px 50px;
-  height: 400px;
-  position: absolute;
-  left: 50%;
-  top: -200px;
-  outline: 6px solid #211f1c;
-  outline-offset: 40px;
 }
-#index #about .about-box .blurb {
-  width: 55%;
-  margin: 0 auto;
-  padding: 80px 0px;
-}
-#index #about .about-box .blurb p {
+#index #about p {
   font-family: inherit;
   font-size: inherit;
-  margin: 0px;
-  padding: 0px;
+  font-weight: inherit;
+  font-style: inherit;
   line-height: inherit;
 }
-@media (max-width: 1024px) {
-  #index #about .about-box .blurb {
-    width: 75%;
-  }
-}
-@media (max-width: 480px) {
-  #index #about .about-box .blurb {
-    font-size: 24px;
-    width: 85%;
-    padding: 60px 0px;
-  }
+#index #about .blurb {
+  padding: 30px 60px;
+  border: 6px solid #211f1c;
+  background-color: rgba(255,211,78,0.2);
+  outline: 30px solid rgba(255,211,78,0.2);
 }
 @media (max-width: 1280px) {
   #index #about {
@@ -908,9 +885,9 @@ body {
 }
 #feed {
   padding: 80px 0px;
-  padding-top: 320px;
+  padding-top: 80px;
   width: 100%;
-  background-color: #bd4932;
+  background-color: #fffad5;
   zoom: 1;
 }
 #feed:before,
@@ -922,7 +899,21 @@ body {
   clear: both;
 }
 #feed .content {
-  color: #fffad5;
+  color: #211f1c;
+}
+#feed .content .halfbox {
+  border-color: #db9e36;
+}
+#feed .content .halfbox .set .time,
+#feed .content .halfbox .set .location {
+  color: #db9e36;
+}
+#feed .content .halfbox .explanation {
+  color: #211f1c;
+}
+#feed .content #map {
+  height: 250px;
+  margin-bottom: 20px;
 }
 @media (max-width: 480px) {
   #feed .content {
@@ -931,10 +922,11 @@ body {
 }
 #feed .content .stories {
   padding: 20px;
-  border-left: 1px solid #ffd34e;
+  border-left: 1px solid #db9e36;
 }
 #feed .content .news {
   margin-bottom: 40px;
+  color: #105b63;
 }
 #feed .content .news:last-child {
   margin-bottom: 0px;
@@ -958,7 +950,7 @@ body {
 #feed .content .news .date {
   font-family: "brandon-grotesque", "Brandon Grotesque";
   font-size: 16px;
-  color: #ffd34e;
+  color: #db9e36;
   position: relative;
   padding-left: 20px;
   margin-top: 8px;
@@ -972,8 +964,8 @@ body {
   height: 10px;
   margin-top: -10px;
   border-bottom-left-radius: 5px;
-  border-bottom: 1px solid #ffd34e;
-  border-left: 1px solid #ffd34e;
+  border-bottom: 1px solid #db9e36;
+  border-left: 1px solid #db9e36;
 }
 #playlists {
   background-color: #fffad5;

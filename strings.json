@@ -75,7 +75,7 @@
     "music": {
       "playlists": {
         "title": "Spillelister",
-        "desc": "We mostly manage our playlists by spotify, and encourage our DJs to share them, so that you can find the music you dance to and really get to know it in your own time.",
+        "desc": "Her kan du finne musikken vi danser til på kurs og sosialdans! Vi oppfordrer DJer og instruktører til å dele Spotify spillelistene sine, slik at du kan bli bedre kjent med musikken.",
         "songs": "sanger",
         "made_by": "av"
       }
@@ -99,7 +99,7 @@
     "courses": {
       "schedule": "Timeplan",
       "title": "Om Kursene",
-      "register": "Meld meg på til",
+      "register": "Meld meg på",
       "levels": "Nivåer"
     },
     "news_stream": "Vår nyhetsstrøm",

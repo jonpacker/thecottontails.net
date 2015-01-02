@@ -1,5 +1,16 @@
 include schedules
 extends layout
+block head
+  link(rel="stylesheet", href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css")
+block scripts
+  script(type="text/javascript", src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js")
+  script.
+    var map = L.map('map').setView([60.394, 5.33], 15)
+    L.tileLayer('http://{s}.tiles.mapbox.com/v3/cottontails.kl7j40d2/{z}/{x}/{y}.png', {
+      attribution: 'Data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
+      maxZoom: 18
+    }).addTo(map);
+    L.marker([60.393141, 5.332011]).addTo(map);
 block prenav
   .index
 block content
@@ -39,7 +50,7 @@ block content
               a.story(href=story.link) #{story.story} 
                 if story.link
                   .fa.fa-external-link-square
-              .date #{story.date[locale]}
+              .date #{story.date[locale]} (#{story.created.locale(locale).fromNow()})
       .content.wider
         .halfbox
           h2= weekly_schedule
@@ -47,5 +58,5 @@ block content
             mixin day(day)
         .halfbox.map
           h2 #{asylbarnehagen.fields.title}
-          .map
+          #map
           .explanation !{asylbarnehagen.fields.directions}

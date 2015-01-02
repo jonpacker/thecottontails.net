@@ -42,6 +42,7 @@ app.use(function(req, res, next) {
 moment.locale('nb')
 
 app.locals._ = _;
+app.locals.moment = require('moment')
 
 require('./social_data')(app);
 

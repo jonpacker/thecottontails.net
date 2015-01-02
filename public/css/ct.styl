@@ -157,7 +157,7 @@ body
         width 30px
         display inline-block
 
-#about
+#kurs #about
   & > div
     padding 80px 10%
     clearfix()
@@ -408,7 +408,7 @@ body
   background-position 50% 50%
   background-repeat no-repeat
 
-  padding-bottom 80px + 240px
+  padding-bottom 80px
 
   @media (max-width: 1024px)
     padding 80px 10%
@@ -696,46 +696,31 @@ body
   width 100%
   display block
   position relative
-  height 0px
-  overflow visible
+  height auto
+  padding 80px 20%
+  box-sizing border-box
+  background-image url(/img/fun.jpg)
+  background-position center
+  background-size cover
+  cs_font_body()
 
-  .about-box
-    color cs_col6
-    background-image url(/img/fun.jpg)
-    background-position center
-    background-size cover
-    cs_font_serif()
-    font-size 32px
-    text-align center
-    width 80%
-    margin-left -40%
-    box-sizing border-box
-    padding 20px 50px
-    height 400px
-    position absolute
-    left 50%
-    top -200px
-    outline 6px solid cs_col6
-    outline-offset 40px
+  color cs_col6
+  font-size 32px
+  text-align center
 
-    .blurb
-      width 55%
-      margin 0 auto
-      padding 80px 0px
-      p
-        font-family inherit
-        font-size inherit
-        margin 0px
-        padding 0px
-        line-height inherit
+  p
+    font-family inherit
+    font-size inherit
+    font-weight inherit
+    font-style inherit
+    line-height inherit
+  
+  .blurb
+    padding 30px 60px
+    border 6px solid cs_col6
+    background-color rgba(cs_col3, 20%)
+    outline 30px solid @background-color
 
-      @media(max-width: 1024px)
-        width 75%
-
-      @media(max-width: 480px)
-        font-size 24px
-        width 85%
-        padding 60px 0px
 
 @media(max-width: 1280px)
   #index #about
@@ -771,23 +756,37 @@ body
 
 #feed
   padding 80px 0px
-  padding-top 240px + 80px
+  padding-top 80px
   width 100%
-  background-color cs_col1
+  background-color cs_col2
   clearfix()
 
   .content
-    color cs_col2
+    color cs_col6
+
+    .halfbox
+      border-color cs_col4
+      .set .time
+      .set .location
+        color cs_col4
+
+      .explanation
+        color cs_col6
+
+    #map
+      height 250px
+      margin-bottom 20px
 
     @media (max-width: 480px)
       width 80%
 
     .stories
       padding 20px
-      border-left 1px solid cs_col3
+      border-left 1px solid cs_col4
 
     .news
       margin-bottom 40px
+      color cs_col5
       &:last-child
         margin-bottom 0px
       .story
@@ -806,7 +805,7 @@ body
       .date 
         cs_font_body()
         font-size 16px
-        color cs_col3
+        color cs_col4
         position relative
         padding-left 20px
         margin-top 8px
@@ -819,7 +818,7 @@ body
           height 10px
           margin-top -10px
           border-bottom-left-radius 5px
-          border-bottom 1px solid cs_col3
+          border-bottom 1px solid cs_col4
           border-left @border-bottom
 
 #playlists
