@@ -2,7 +2,7 @@ extends layout
 block content
   #events
     h1= whats_happening
-    if events.length == 0
+    if events.length > 0
       each event in events
         a.event(href=event.link, target="blank")
           h2= event.name
@@ -15,4 +15,4 @@ block content
               |  #{event.location}
           .fa.fa-external-link
     else 
-      p.empty= events.none
+      p.empty= events_text.none

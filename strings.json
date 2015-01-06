@@ -14,7 +14,7 @@
       "music": "Music",
       "about": "The Dances"
     },
-    "events": {
+    "events_text": {
       "none": "Hmm. Seems like there's no new events to share."
     },
     "music": {
@@ -69,7 +69,7 @@
       "music": "Musikk",
       "about": "Dansene"
     },
-    "events": {
+    "events_text": {
       "none": "Hm. Ser ikke ut til at det er noen kommende arrangementer."
     },
     "music": {
