@@ -164,50 +164,50 @@ body {
   width: 30px;
   display: inline-block;
 }
-#kurs #about > div {
+#about-page > div {
   padding: 80px 10%;
   zoom: 1;
   color: #211f1c;
 }
-#kurs #about > div:before,
-#kurs #about > div:after {
+#about-page > div:before,
+#about-page > div:after {
   content: "";
   display: table;
 }
-#kurs #about > div:after {
+#about-page > div:after {
   clear: both;
 }
-#kurs #about h1 {
+#about-page h1 {
   font-family: "lust-script", "Lust Script";
   font-style: normal;
   font-weight: normal;
   text-rendering: optimizeLegibility;
   font-size: 54px;
 }
-#kurs #about p {
+#about-page p {
   font-family: "brandon-grotesque", "Brandon Grotesque";
   font-size: 24px;
   line-height: 32px;
   padding: 0px 5%;
 }
-#kurs #about #cottontails {
+#about-page #cottontails {
   background-color: #fffad5;
   color: #211f1c;
 }
-#kurs #about #cottontails h1 {
+#about-page #cottontails h1 {
   margin-bottom: 60px;
 }
-#kurs #about #cottontails .logo {
+#about-page #cottontails .logo {
   float: left;
   margin-top: -20px;
   width: 200px;
   margin-right: 40px;
 }
-#kurs #about #heading {
+#about-page #heading {
   padding: 80px 0px;
 }
-#kurs #about .dance,
-#kurs #about .dance-head {
+#about-page .dance,
+#about-page .dance-head {
   background-color: #211f1c;
   color: #fffad5;
   padding: 0px;
@@ -215,8 +215,8 @@ body {
   width: 100%;
   text-align: center;
 }
-#kurs #about .dance h1.really-big,
-#kurs #about .dance-head h1.really-big {
+#about-page .dance h1.really-big,
+#about-page .dance-head h1.really-big {
   font-size: 128px;
   font-weight: normal;
   border-bottom: 2px solid #fffad5;
@@ -224,15 +224,15 @@ body {
   margin: 0 auto;
   padding-bottom: 40px;
 }
-#kurs #about .dance:after {
+#about-page .dance:after {
   padding-top: 50%;
   content: '';
   display: block;
 }
-#kurs #about .dance#lindyhop video {
+#about-page .dance#lindyhop video {
   margin-top: 1%;
 }
-#kurs #about .dance .videobg {
+#about-page .dance .videobg {
   width: 100%;
   z-index: 0;
   position: absolute;
@@ -247,11 +247,11 @@ body {
   -ms-transition: opacity 150ms ease-out;
   transition: opacity 150ms ease-out;
 }
-#kurs #about .dance .videobg video {
+#about-page .dance .videobg video {
   width: 100%;
   margin-top: -2.25%;
 }
-#kurs #about .dance .not-videobg {
+#about-page .dance .not-videobg {
   zoom: 1;
   position: absolute;
   z-index: 10;
@@ -262,26 +262,29 @@ body {
   box-sizing: border-box;
   text-align: center;
 }
-#kurs #about .dance .not-videobg:before,
-#kurs #about .dance .not-videobg:after {
+#about-page .dance .not-videobg:before,
+#about-page .dance .not-videobg:after {
   content: "";
   display: table;
 }
-#kurs #about .dance .not-videobg:after {
+#about-page .dance .not-videobg:after {
   clear: both;
 }
-#kurs #about .dance .not-videobg .caption {
+#about-page .dance .not-videobg .caption {
   display: inline-block;
   height: 60%;
   width: 50%;
   margin-top: 10%;
   position: relative;
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
 }
-#kurs #about .dance .not-videobg .caption h1 {
+#about-page .dance .not-videobg .caption h1 {
   margin-top: 0px;
   font-size: 84px;
 }
-#kurs #about .dance .not-videobg .caption h1 p {
+#about-page .dance .not-videobg .caption h1 p {
   margin: 0px;
   padding: 0px;
   font-size: inherit;
@@ -290,12 +293,12 @@ body {
   font-weight: inherit;
   line-height: inherit;
 }
-#kurs #about .dance .not-videobg .caption p {
+#about-page .dance .not-videobg .caption p {
   font-size: 24px;
   line-height: 32px;
   padding: 0px;
 }
-#kurs #about .dance .not-videobg .unmute-button {
+#about-page .dance .not-videobg .unmute-button {
   font-size: 30px;
   position: absolute;
   top: 40px;
@@ -303,10 +306,10 @@ body {
   left: 40px;
   color: #ffd34e;
 }
-#kurs #about .dance .not-videobg .unmute-button .fa-inverse {
+#about-page .dance .not-videobg .unmute-button .fa-inverse {
   color: #211f1c;
 }
-#kurs #about .dance h1.while-playing {
+#about-page .dance h1.while-playing {
   font-size: 34px;
   font-family: "Playfair Display";
   font-style: italic;
@@ -326,47 +329,47 @@ body {
   -ms-transition: opacity 150ms ease-out;
   transition: opacity 150ms ease-out;
 }
-#kurs #about .dance h1.while-playing p {
+#about-page .dance h1.while-playing p {
   padding: 0px;
   margin: 0px;
   font-family: inherit;
   font-style: inherit;
   font-weight: inherit;
 }
-#kurs #about .dance.muted .videobg {
+#about-page .dance.muted .videobg {
   opacity: 0.1;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=10)";
   filter: alpha(opacity=10);
 }
-#kurs #about .dance.muted h1.while-playing {
+#about-page .dance.muted h1.while-playing {
   opacity: 0;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
   filter: alpha(opacity=0);
 }
-#kurs #about .dance.muted .caption {
+#about-page .dance.muted .caption {
   opacity: 1;
   -ms-filter: none;
   filter: none;
 }
-#kurs #about .video {
+#about-page .video {
   margin-left: 5%;
   float: left;
   width: 44%;
 }
-#kurs #about .video video {
+#about-page .video video {
   width: 100%;
 }
-#kurs #about .video video[muted] {
+#about-page .video video[muted] {
   opacity: 0.5;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
   filter: alpha(opacity=50);
 }
-#kurs #about .text {
+#about-page .text {
   margin-right: 5%;
   float: right;
   width: 44%;
 }
-#kurs #about .text p {
+#about-page .text p {
   margin-top: 0px;
 }
 #nav {
