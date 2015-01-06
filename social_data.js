@@ -1,5 +1,6 @@
 var request = require('request');
 var moment = require('moment')
+require('moment-timezone');
 var _ = require('underscore');
 var SpotifyWebApi = require('spotify-web-api-node');
 
@@ -13,9 +14,10 @@ module.exports = function(app) {
 
   function parseEvent(event) {
     if (_.find(app.locals.events, function(event0) { return event0.id == event.id })) return;
-    var startUnix = moment(event.start_time).unix();
-    var relevantUnix = event.end_time ? moment(event.end_time).unix() : startUnix;
-    if (relevantUnix < moment().unix()) return; // old event
+    var startTime = moment(event.start_time).tz('Europe/Oslo');
+    var startUnix = startTime.unix();
+    var relevantUnix = event.end_time ? moment(event.end_time).tz('Europe/Oslo').unix() : startUnix;
+    if (relevantUnix < moment().tz('Europe/Oslo').unix()) return; // old event
     var parsed = {
       id: event.id,
       name: event.name,
@@ -25,20 +27,20 @@ module.exports = function(app) {
     };
     if (!event.end_time) {
       parsed.when = {
-        nb: moment(event.start_time).locale('nb').format('LT, Do MMMM'),
-        en: moment(event.start_time).locale('en').format('LT, Do MMMM')
+        nb: startTime.locale('nb').format('LT, Do MMMM'),
+        en: startTime.locale('en').format('LT, Do MMMM')
       }
     } else {
-      var start = moment(event.start_time), end = moment(event.end_time);
-      if (start.dayOfYear() == end.dayOfYear()) {
+      var endTime = moment(event.end_time).tz('Europe/Oslo');
+      if (startTime.dayOfYear() == endTime.dayOfYear()) {
         parsed.when = {
-          nb: start.locale('nb').format('LT') + '-' + end.locale('nb').format('LT, Do MMMM'),
-          en: start.locale('en').format('LT') + '-' + end.locale('en').format('LT, Do MMMM')
+          nb: startTime.locale('nb').format('LT') + '-' + endTime.locale('nb').format('LT, Do MMMM'),
+          en: startTime.locale('en').format('LT') + '-' + endTime.locale('en').format('LT, Do MMMM')
         };
       } else {
         parsed.when = {
-          nb: start.locale('nb').format('Do MMMM') + '-' + end.locale('nb').format('Do MMMM'),
-          en: start.locale('en').format('Do MMMM') + '-' + end.locale('en').format('Do MMMM')
+          nb: startTime.locale('nb').format('Do MMMM') + '-' + endTime.locale('nb').format('Do MMMM'),
+          en: startTime.locale('en').format('Do MMMM') + '-' + endTime.locale('en').format('Do MMMM')
         };
       }
     }
@@ -71,7 +73,7 @@ module.exports = function(app) {
           }
           return !!post.message
         }).map(function(post) {
-          var created = moment(post.created_time);
+          var created = moment(post.created_time).tz('Europe/Oslo');
           return {
             story: post.message,
             date: {
