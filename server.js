@@ -157,6 +157,6 @@ app.get('/musikk', function(req, res) {
   res.render('music');
 });
 
-var server = app.listen(8059, function() {
+var server = app.listen(process.env.NODE_ENV == 'production' ? 80 : 8059, function() {
   console.log('listening on ', server.address().address, server.address().port)
 });
