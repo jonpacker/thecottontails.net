@@ -1,7 +1,7 @@
 extends layout
 block content
   #lokaler
-    #hero
+    .place.asylbarnehagen
       .bg
       .not-bg
         h1 
@@ -12,4 +12,10 @@ block content
         .map
           img(src="/img/map.jpg")
         .entrydesc!= asylbarnehagen.fields.directions
-
+    .place.lagshuset
+      .bg
+      .not-bg
+        h1
+          .fa.fa-home
+          |  #{lagshuset.fields.title}
+        | !{lagshuset.fields.desc}
