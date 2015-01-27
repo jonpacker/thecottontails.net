@@ -783,7 +783,7 @@ body
       .explanation
         color cs_col6
 
-    #map
+    #map-ab, #map-lh
       height 250px
       margin-bottom 20px
 
@@ -928,11 +928,14 @@ body
   border 6px solid cs_col3
   padding 40px
 
-  &:nth-of-type(1)
+  &:nth-of-type(2n-1)
     float left
-  &:nth-of-type(2)
+    clear left
+  &:nth-of-type(2n)
     float right
     margin-top 200px
+  &:nth-of-type(2n+1)
+    margin-top 50px
 
   @media (max-width: 1024px)
     width 100%
