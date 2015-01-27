@@ -29,22 +29,38 @@ body {
   height: 100%;
   margin: 0 auto;
 }
-#lokaler #hero {
-  background-color: #105b63;
+#lokaler .place {
   position: relative;
   color: #fffad5;
 }
-#lokaler #hero .not-bg {
+#lokaler .place.asylbarnehagen {
+  background-color: #105b63;
+}
+#lokaler .place.asylbarnehagen .bg {
+  background-image: url("/img/asylbarnehagen.jpg");
+}
+#lokaler .place.asylbarnehagen .not-bg p {
+  color: #ffd34e;
+}
+#lokaler .place.lagshuset {
+  background-color: #db9e36;
+}
+#lokaler .place.lagshuset .bg {
+  background-image: url("/img/lagshuset.jpg");
+}
+#lokaler .place.lagshuset .not-bg p {
+  color: #105b63;
+}
+#lokaler .place .not-bg {
   padding: 80px 30%;
   text-align: center;
 }
-#lokaler #hero .bg {
-  background-image: url("/img/lokaler.jpg");
+#lokaler .place .bg {
   opacity: 0.1;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=10)";
   filter: alpha(opacity=10);
 }
-#lokaler #hero h1 {
+#lokaler .place h1 {
   font-size: 54px;
   font-family: "lust-script", "Lust Script";
   font-style: normal;
@@ -54,35 +70,34 @@ body {
   margin-bottom: 60px;
   border-bottom: 2px solid #fffad5;
 }
-#lokaler #hero .not-bg p {
+#lokaler .place .not-bg p {
   font-family: "brandon-grotesque", "Brandon Grotesque";
   font-size: 26px;
   line-height: 42px;
   padding: 0px 10%;
-  color: #ffd34e;
 }
-#lokaler #hero #entry {
+#lokaler .place #entry {
   padding: 0px 10% 80px;
   position: relative;
   zoom: 1;
 }
-#lokaler #hero #entry:before,
-#lokaler #hero #entry:after {
+#lokaler .place #entry:before,
+#lokaler .place #entry:after {
   content: "";
   display: table;
 }
-#lokaler #hero #entry:after {
+#lokaler .place #entry:after {
   clear: both;
 }
-#lokaler #hero #entry .map {
+#lokaler .place #entry .map {
   width: 55%;
   margin-right: 5%;
   float: left;
 }
-#lokaler #hero #entry .map img {
+#lokaler .place #entry .map img {
   width: 100%;
 }
-#lokaler #hero #entry .entrydesc {
+#lokaler .place #entry .entrydesc {
   width: 40%;
   font-family: "brandon-grotesque", "Brandon Grotesque";
   font-size: 22px;
@@ -93,7 +108,7 @@ body {
   border-top: 2px solid #fffad5;
   border-bottom: 2px solid #fffad5;
 }
-#lokaler #hero #entry .entrydesc p {
+#lokaler .place #entry .entrydesc p {
   margin: 0px;
   padding: 0px;
 }

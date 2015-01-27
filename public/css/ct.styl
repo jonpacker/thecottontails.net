@@ -44,8 +44,19 @@ body
     height 100%
     margin 0 auto
 
-#lokaler #hero
-  background-color cs_col5
+#lokaler .place
+  &.asylbarnehagen
+    background-color cs_col5
+    .bg
+      background-image url(/img/asylbarnehagen.jpg)
+    .not-bg p
+      color cs_col3
+  &.lagshuset
+    background-color cs_col4
+    .bg
+      background-image url(/img/lagshuset.jpg)
+    .not-bg p
+      color cs_col5
   position relative
   color cs_col2
 
@@ -53,7 +64,6 @@ body
     padding 80px 30%
     text-align center
   .bg
-    background-image url(/img/lokaler.jpg)
     opacity 0.1
 
   h1
@@ -68,7 +78,6 @@ body
     font-size 26px
     line-height 42px
     padding 0px 10%
-    color cs_col3
 
   #entry
     padding 0px 10% 80px
