@@ -1,7 +1,7 @@
 extends layout
 block content
   #registration
-    h1 #{registration.title}, !{levels.fields.title}
+    h1 #{registration.title}, #{registration.beginner_course} !{levels.fields.title}
     form.registration(method="POST", action="/registration/spring15newbeginner")
       .field
         label(for="first_name")= registration.first_name
