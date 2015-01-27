@@ -1051,6 +1051,9 @@ body {
   background-color: #bd4932;
   color: #fffad5;
 }
+#timeplan .content {
+  width: 70%;
+}
 #timeplan h1 p {
   display: inline;
   padding: 0px;
