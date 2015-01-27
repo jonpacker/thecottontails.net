@@ -2,7 +2,7 @@ extends layout
 block content
   #registration
     h1 #{registration.title}, !{levels.fields.title}
-    form.registration(method="POST", action="/registration/spring15")
+    form.registration(method="POST", action="/registration/spring15newbeginner")
       .field
         label(for="first_name")= registration.first_name
         input.text(name="first_name")
@@ -19,13 +19,15 @@ block content
         input.role.last(type="radio", id="follower", name="role", value="follower")
         label.role.last(for="follower")= registration.follower
 
-      h2= registration.level
-      .field-content
-        each level, i in levels.fields.levels
-          input.level(type="radio", id=level.fields.internal_name, name="level", checked=i==0, value=level.fields.internal_name)
-          label.level-desc(for=level.fields.internal_name)
-            h3!= level.fields.name
-            | !{level.fields.desc}
+      
+      //- h2= registration.level
+      //- .field-content
+      //-   each level, i in levels.fields.levels
+      //-     input.level(type="radio", id=level.fields.internal_name, name="level", checked=i==0, value=level.fields.internal_name)
+      //-     label.level-desc(for=level.fields.internal_name)
+      //-       h3!= level.fields.name
+      //-       | !{level.fields.desc}
+
       input.submit(type="submit", value=registration.register)
     
 
