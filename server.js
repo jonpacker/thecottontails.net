@@ -50,7 +50,8 @@ app.get('/', function(req, res) {
   data([
     'club_overview_text',
     'schedule',
-    'asylbarnehagen'
+    'asylbarnehagen',
+    'lagshuset'
   ], req.session.locale, function(e, locals) {
     if (e) return res.send(500, e);
     res.render('index', locals);
@@ -126,7 +127,8 @@ app.get('/registrations/:event', basicAuth('cottontails', passwd), function(req,
 app.get('/lokaler', function(req, res) {
   res.locals.current = 'locations';
   data([
-    'asylbarnehagen'
+    'asylbarnehagen',
+    'lagshuset'
   ], req.session.locale, function(e, locals) {
     if (e) return res.send(500, e);
     res.render('lokaler', locals);
