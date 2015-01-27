@@ -45,7 +45,7 @@
     "courses": {
       "schedule": "Schedule",
       "title": "Course Overview",
-      "register": "Sign me up for",
+      "register": "Sign me up",
       "levels": "Levels"
     },
     "news_stream": "Our newsfeed",
