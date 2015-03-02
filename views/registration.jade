@@ -1,8 +1,8 @@
 extends layout
 block content
   #registration
-    h1 #{registration.title}, #{registration.beginner_course} !{levels.fields.title}
-    form.registration(method="POST", action="/registration/spring15newbeginner")
+    h1 #{registration.title}, !{current_event.fields.event[0].fields.title}
+    form.registration(method="POST", action="/registration/#{current_event.fields.event[0].fields.internal_name}")
       .field
         label(for="first_name")= registration.first_name
         input.text(name="first_name")

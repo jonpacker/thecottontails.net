@@ -64,7 +64,8 @@ app.get('/kurs', function(req, res) {
     'level_overview',
     'course_overview',
     'levels',
-    'schedule'
+    'schedule',
+    'current_event'
   ], req.session.locale, function(e, locals) {
     if (e) return res.send(500, e);
     res.render('kurs', locals);
@@ -74,7 +75,8 @@ app.get('/kurs', function(req, res) {
 app.get('/registration', function(req, res) {
   res.locals.current = 'courses';
   data([
-    'levels'
+    'levels',
+    'current_event'
   ], req.session.locale, function(e, locals) {
     if (e) return res.send(500, e);
     res.render('registration', locals);

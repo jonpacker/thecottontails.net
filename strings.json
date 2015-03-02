@@ -39,8 +39,7 @@
       "thanks": "Thanks",
       "role": "Role",
       "leader": "Leader",
-      "follower": "Follower",
-      "beginner_course": "Beginner Course"
+      "follower": "Follower"
     },
     "courses": {
       "schedule": "Schedule",
@@ -95,8 +94,7 @@
       "thanks": "Takk",
       "role": "Rolle",
       "leader": "Fører",
-      "follower": "Følger",
-      "beginner_course": "nybegynnerkurs"
+      "follower": "Følger"
     },
     "courses": {
       "schedule": "Timeplan",
