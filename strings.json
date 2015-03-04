@@ -5,7 +5,8 @@
       "location": "Location",
       "whats_happening": "Upcoming Events",
       "music": "Music",
-      "about": "About Lindy Hop and Us"
+      "about": "About Lindy Hop and Us",
+      "shop": "Shop"
     },
     "portal": {
       "courses": "Courses",
@@ -60,7 +61,8 @@
       "location": "Lokaler",
       "whats_happening": "Hva skjer?",
       "music": "Musikk",
-      "about": "Om Lindy Hop og Oss"
+      "about": "Om Lindy Hop og Oss",
+      "shop": "Butikk"
     },
     "portal": {
       "courses": "Kurs",

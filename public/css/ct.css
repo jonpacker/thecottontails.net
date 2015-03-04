@@ -1292,6 +1292,18 @@ body {
     font-size: 22px;
   }
 }
+#contact .hello {
+  text-align: center;
+  font-family: "brandon-grotesque", "Brandon Grotesque";
+  padding: 60px 0px 0px;
+  opacity: 0.4;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
+  filter: alpha(opacity=40);
+  color: #fffad5;
+}
+#contact .hello a {
+  color: inherit;
+}
 #index + #contact h1 {
   display: block;
 }

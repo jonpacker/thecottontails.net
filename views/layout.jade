@@ -21,6 +21,7 @@ html
         a.item(href="/lokaler", class=current == 'locations' ? 'active' : '')= nav.location
         a.item(href="/hvaskjer", class=current == 'events' ? 'active' : '')= nav.whats_happening
         a.item(href="/musikk", class=current == 'music' ? 'active' : '')= nav.music
+        a.item(href="http://cottontails.spreadshirt.no", target="_blank")= nav.shop
         a.item(href="/om", class=current == 'about' ? 'active' : '')= nav.about
         mixin flags
     block content
@@ -41,6 +42,7 @@ html
             .fa.fa-spotify
           a.bit(href="mailto:post@thecottontails.net")
             .fa.fa-envelope
+        .hello site by <a href="http://jonpacker.com", target="_blank">jon packer</a>. we are <a href="http://github.com/jonpacker/thecottontails.net", target="_blank">open source</a>. give us some <a href="mailto:post@thecottontails.net">feedback</a>?
     script(type='text/javascript', src='/js/jquery-2.1.1.min.js')
     script(type='text/javascript', src='/js/ct.js')
     block scripts
