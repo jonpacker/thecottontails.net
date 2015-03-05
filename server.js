@@ -21,7 +21,7 @@ app.use(stylus.middleware({
   }
 }));
 app.use(session({
-  secret: '1d2d0863-55c6-451f-ac1c-c589d5c9a3a3',
+  secret: '1d2d0863-55c6-451f-ac1c-c589d5c9a3a4',
   resave: false,
   saveUninitialized: true
 }));
@@ -32,10 +32,15 @@ app.use(function(req, res, next) {
     req.session.locale = req.query.locale;
   }
   if (!req.session.locale) {
-    req.session.locale = req.locale || 'nb';
+    if (req.locale) {
+      req.session.locale = req.locale.substring(0, 2);
+    } else {
+      req.session.locale = 'nb';
+    }
   }
   res.locals = _.extend(res.locals, strings[req.session.locale]);
   res.locals.locale = req.session.locale;
+  console.log(res.locals.locale)
   next();
 });
 
