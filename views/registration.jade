@@ -20,13 +20,13 @@ block content
         label.role.last(for="follower")= registration.follower
 
       
-      //- h2= registration.level
-      //- .field-content
-      //-   each level, i in levels.fields.levels
-      //-     input.level(type="radio", id=level.fields.internal_name, name="level", checked=i==0, value=level.fields.internal_name)
-      //-     label.level-desc(for=level.fields.internal_name)
-      //-       h3!= level.fields.name
-      //-       | !{level.fields.desc}
+      h2= registration.level
+      .field-content
+        each level, i in levels.fields.levels
+          input.level(type="radio", id=level.fields.internal_name, name="level", checked=i==0, value=level.fields.internal_name)
+          label.level-desc(for=level.fields.internal_name)
+            h3!= level.fields.name
+            | !{level.fields.desc}
 
       input.submit(type="submit", value=registration.register)
     
