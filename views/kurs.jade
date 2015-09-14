@@ -11,7 +11,8 @@ block content
     #about
       h1= courses.title
       | !{course_overview.fields.text}
-      a.registration(href="/registration") #{courses.register} - !{current_event.fields.event[0].fields.title}
+      if current_event.fields.event.length > 0
+        a.registration(href="/registration") #{courses.register} - !{current_event.fields.event[0].fields.title}
     #levels
       .content
         h1= courses.levels
