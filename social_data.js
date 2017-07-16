@@ -60,7 +60,7 @@ module.exports = function(app) {
     var facebookAccessTokenUrl = "https://graph.facebook.com/oauth/access_token?grant_type=client_credentials&client_id=825246320872863&client_secret=e996a8d5a7534d69e0020ccb84774536";
     request(facebookAccessTokenUrl, function(err, res) {
       if (err) return;
-      var token = res.body;
+      var token = 'access_token=' + JSON.parse(res.body).access_token;
       request('https://graph.facebook.com/cottontailsdanseklubb/posts?' + token, function(err, res) {
         if (err) return;
         var body = JSON.parse(res.body);
